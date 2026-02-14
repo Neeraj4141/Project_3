@@ -50,15 +50,10 @@ public class UserCtl extends BaseCtl {
 
 			while (it.hasNext()) {
 				RoleDTO dto = (RoleDTO) it.next();
-				System.out.println(dto.getId());
-				System.out.println(dto.getName());
-				System.out.println(dto.getDescription());
-
 			}
 
 			request.setAttribute("roleList", list);
-		} 
-		catch (ApplicationException e) {
+		} catch (ApplicationException e) {
 			e.printStackTrace();
 		}
 	}
@@ -160,21 +155,15 @@ public class UserCtl extends BaseCtl {
 		dto.setRoleId(DataUtility.getLong(request.getParameter("role")));
 		dto.setDob(DataUtility.getDate(request.getParameter("dob")));
 		dto.setFirstName(DataUtility.getString(request.getParameter("firstName")));
-
 		dto.setLastName(DataUtility.getString(request.getParameter("lastName")));
-
 		dto.setLogin(DataUtility.getString(request.getParameter("emailId")));
-
 		dto.setPassword(DataUtility.getString(request.getParameter("password")));
-
 		dto.setConfirmPassword(DataUtility.getString(request.getParameter("confirmPassword")));
-
 		dto.setGender(DataUtility.getString(request.getParameter("gender")));
 		dto.setMobileNo(DataUtility.getString(request.getParameter("mobileNo")));
 
 		populateBean(dto, request);
-
-		System.out.println(request.getParameter("dob") + "......." + dto.getDob());
+		
 		log.debug("UserRegistrationCtl Method populatedto Ended");
 
 		return dto;
@@ -188,12 +177,11 @@ public class UserCtl extends BaseCtl {
 
 		String op = DataUtility.getString(request.getParameter("operation"));
 
-		// get model
+		
 		UserModelInt model = ModelFactory.getInstance().getUserModel();
 		long id = DataUtility.getLong(request.getParameter("id"));
 
 		if (id > 0 || op != null) {
-			System.out.println("in id > 0  condition");
 			UserDTO dto = null;
 			try {
 				dto = model.findByPK(id);

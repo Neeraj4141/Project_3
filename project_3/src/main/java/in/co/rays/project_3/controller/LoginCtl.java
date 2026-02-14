@@ -89,11 +89,7 @@ public class LoginCtl extends BaseCtl {
 
 		String op = request.getParameter("operation");
 
-		UserModelInt model = ModelFactory.getInstance().getUserModel();
-
-		HttpSession session = request.getSession(true);
-
-		long id = DataUtility.getLong(request.getParameter("id"));
+		HttpSession session = request.getSession();
 
 		if (OP_LOG_OUT.equals(op)) {
 			session = request.getSession();
@@ -102,19 +98,7 @@ public class LoginCtl extends BaseCtl {
 			ServletUtility.forward(ORSView.LOGIN_VIEW, request, response);
 			return;
 		}
-		if (id > 0) {
-			UserDTO dto;
-			try {
-				dto = model.findByPK(id);
-				ServletUtility.setDto(dto, request);
-			} catch (ApplicationException e) {
 
-				e.printStackTrace();
-				ServletUtility.handleException(e, request, response);
-				return;
-			}
-
-		}
 		ServletUtility.forward(getView(), request, response);
 
 	}
