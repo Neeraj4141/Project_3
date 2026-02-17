@@ -46,15 +46,11 @@ public class UserModelHibImp implements UserModelInt {
 
 			int pk = 0;
 			tx = session.beginTransaction();
-
-			System.out.println("trac1");
 			session.save(dto);
-			System.out.println("trac2");
 			tx.commit();
-			System.out.println("trac3");
+
 		} catch (HibernateException e) {
 			e.printStackTrace();
-			// TODO: handle exception
 			if (tx != null) {
 				tx.rollback();
 
@@ -63,13 +59,11 @@ public class UserModelHibImp implements UserModelInt {
 		} finally {
 			session.close();
 		}
-		/* log.debug("Model add End"); */
 		return dto.getId();
 
 	}
 
 	public void delete(UserDTO dto) throws ApplicationException {
-		// TODO Auto-generated method stub
 		Session session = null;
 		Transaction tx = null;
 		try {
@@ -94,7 +88,7 @@ public class UserModelHibImp implements UserModelInt {
 		UserDTO existDto = findByLogin(dto.getLogin());
 		// Check if updated LoginId already exist
 		if (existDto != null && existDto.getId() != dto.getId()) {
-			 throw new DuplicateRecordException("LoginId is already exist");
+			throw new DuplicateRecordException("LoginId is already exist");
 		}
 
 		try {

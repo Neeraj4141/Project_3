@@ -145,11 +145,6 @@ public class UserCtl extends BaseCtl {
 
 		UserDTO dto = new UserDTO();
 
-		System.out.println(request.getParameter("dob"));
-		System.out.println("Populate end " + "................" + request.getParameter("id"));
-		System.out.println("-------------------------------------------" + request.getParameter("password"));
-		System.out.println(request.getParameter("confirmPassword"));
-
 		dto.setId(DataUtility.getLong(request.getParameter("id")));
 
 		dto.setRoleId(DataUtility.getLong(request.getParameter("role")));

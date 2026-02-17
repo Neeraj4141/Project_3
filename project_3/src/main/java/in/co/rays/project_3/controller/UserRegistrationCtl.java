@@ -131,10 +131,9 @@ public class UserRegistrationCtl extends BaseCtl {
 		dto.setMobileNo(DataUtility.getString(request.getParameter("mobileNo")));
 
 		dto.setDob(DataUtility.getDate(request.getParameter("dob")));
-		
+
 		return populateBean(dto, request);
 
-		
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -172,7 +171,6 @@ public class UserRegistrationCtl extends BaseCtl {
 				ServletUtility.handleException(e, request, response);
 				return;
 			}
-			//ServletUtility.setSuccessMessage("Registration successfully", request);
 			ServletUtility.forward(ORSView.USER_REGISTRATION_VIEW, request, response);
 		} else if (OP_RESET.equalsIgnoreCase(op)) {
 
