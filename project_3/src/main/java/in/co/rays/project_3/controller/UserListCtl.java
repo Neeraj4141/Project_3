@@ -81,15 +81,6 @@ public class UserListCtl extends BaseCtl {
 		try {
 
 			list = model.search(dto, pageNo, pageSize);
-
-			ArrayList<UserDTO> a = (ArrayList<UserDTO>) list;
-
-			for (UserDTO udto1 : a) {
-				System.out.println(udto1.getRoleId() + "[[[[[[[[[[[--------------------");
-			}
-
-			System.out.println(list + "----------------------------------------------------------");
-			System.out.println(list.indexOf(3));
 			next = model.search(dto, pageNo + 1, pageSize);
 			ServletUtility.setList(list, request);
 			if (list == null || list.size() == 0) {
@@ -135,12 +126,10 @@ public class UserListCtl extends BaseCtl {
 		pageSize = (pageSize == 0) ? DataUtility.getInt(PropertyReader.getValue("page.size")) : pageSize;
 
 		UserDTO dto = (UserDTO) populateDTO(request);
-
 		String op = DataUtility.getString(request.getParameter("operation"));
 
-// get the selected checkbox ids array for delete list
-		String[] ids = request.getParameterValues("ids");
 
+		String[] ids = request.getParameterValues("ids");
 		UserModelInt model = ModelFactory.getInstance().getUserModel();
 		try {
 
@@ -179,10 +168,9 @@ public class UserListCtl extends BaseCtl {
 				return;
 			}
 			dto = (UserDTO) populateDTO(request);
-			System.out.println("y yyyyyyyyyy" + dto.getRoleId());
+			
 
 			list = model.search(dto, pageNo, pageSize);
-
 			ServletUtility.setDto(dto, request);
 			next = model.search(dto, pageNo + 1, pageSize);
 
@@ -210,7 +198,6 @@ public class UserListCtl extends BaseCtl {
 			ServletUtility.handleException(e, request, response);
 			return;
 		} catch (Exception e) {
-// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		log.debug("UserListCtl doGet End");
