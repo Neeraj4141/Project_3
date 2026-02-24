@@ -21,13 +21,12 @@
 <style>
 .hm {
 	background-image: url('<%=ORSView.APP_CONTEXT%>/img/list.png');
-	
 	background-repeat: no-repeat;
-	background-attachment: fixed; 
+	background-attachment: fixed;
 	background-size: cover;
 	padding-top: 85px;
-	
-    /*  background-size: 100%; */
+
+	/*  background-size: 100%; */
 }
 
 .p1 {
@@ -237,20 +236,7 @@
 			<%
 				}
 			%>
-			<%-- <%
-				if (!ServletUtility.getSuccessMessage(request).equals("")) {
-			%>
 
-			<div class="col-md-4 alert alert-success alert-dismissible"
-				style="background-color: #80ff80">
-				<button type="button" class="close" data-dismiss="alert">&times;</button>
-				<h4>
-					<font color="#008000"><%=ServletUtility.getSuccessMessage(request)%></font>
-				</h4>
-			</div>
-			<%
-				}
-			%> --%>
 			<input type="hidden" name="pageNo" value="<%=pageNo%>"> <input
 				type="hidden" name="pageSize" value="<%=pageSize%>">
 		</form>

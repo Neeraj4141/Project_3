@@ -75,8 +75,6 @@ public class UserListCtl extends BaseCtl {
 		int pageSize = DataUtility.getInt(PropertyReader.getValue("page.size"));
 
 		UserDTO dto = (UserDTO) populateDTO(request);
-		// get the selected checkbox ids array for delete list
-
 		UserModelInt model = ModelFactory.getInstance().getUserModel();
 		try {
 
@@ -175,7 +173,7 @@ public class UserListCtl extends BaseCtl {
 			next = model.search(dto, pageNo + 1, pageSize);
 
 			ServletUtility.setList(list, request);
-			ServletUtility.setList(list, request);
+			
 
 			if (list == null || list.size() == 0) {
 				if (!OP_DELETE.equalsIgnoreCase(op)) {

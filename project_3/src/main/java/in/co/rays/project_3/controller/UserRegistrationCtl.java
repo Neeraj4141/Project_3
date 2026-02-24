@@ -43,7 +43,6 @@ public class UserRegistrationCtl extends BaseCtl {
 		} else if (!DataValidator.isName(request.getParameter("firstName"))) {
 			request.setAttribute("firstName", "First name contain Alphabets only");
 			pass = false;
-
 		}
 		if (DataValidator.isNull(request.getParameter("lastName"))) {
 			request.setAttribute("lastName", PropertyReader.getValue("error.require", "last Name"));
@@ -51,7 +50,6 @@ public class UserRegistrationCtl extends BaseCtl {
 		} else if (!DataValidator.isName(request.getParameter("lastName"))) {
 			request.setAttribute("lastName", "Last name contain Alphabets only");
 			pass = false;
-
 		}
 		if (DataValidator.isNull(request.getParameter("password"))) {
 			request.setAttribute("password", PropertyReader.getValue("error.require", "password"));
@@ -79,7 +77,6 @@ public class UserRegistrationCtl extends BaseCtl {
 			request.setAttribute("mobileNo", "Please Enter Valid Mobile Number");
 			pass = false;
 		}
-
 		if (DataValidator.isNull(request.getParameter("emailId"))) {
 			request.setAttribute("emailId", PropertyReader.getValue("error.require", "email Id"));
 			pass = false;
@@ -114,22 +111,14 @@ public class UserRegistrationCtl extends BaseCtl {
 		UserDTO dto = new UserDTO();
 
 		dto.setId(DataUtility.getLong(request.getParameter("id")));
-
 		dto.setRoleId(RoleDTO.STUDENT);
-
 		dto.setFirstName(DataUtility.getString(request.getParameter("firstName")));
-
 		dto.setLastName(DataUtility.getString(request.getParameter("lastName")));
-
 		dto.setLogin(DataUtility.getString(request.getParameter("emailId")));
-
 		dto.setPassword(DataUtility.getString(request.getParameter("password")));
-
 		dto.setConfirmPassword(DataUtility.getString(request.getParameter("confirmPassword")));
-
 		dto.setGender(DataUtility.getString(request.getParameter("gender")));
 		dto.setMobileNo(DataUtility.getString(request.getParameter("mobileNo")));
-
 		dto.setDob(DataUtility.getDate(request.getParameter("dob")));
 
 		return populateBean(dto, request);
@@ -140,7 +129,6 @@ public class UserRegistrationCtl extends BaseCtl {
 			throws ServletException, IOException {
 
 		ServletUtility.forward(getView(), request, response);
-
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -155,7 +143,6 @@ public class UserRegistrationCtl extends BaseCtl {
 		if (OP_SIGN_UP.equalsIgnoreCase(op)) {
 			UserDTO dto = (UserDTO) populateDTO(request);
 			try {
-				// userModel.add(dto);
 				long pk = userModel.registerUser(dto);
 				ServletUtility.setDto(dto, request);
 				ServletUtility.setSuccessMessage("Registration successfully", request);
@@ -167,7 +154,6 @@ public class UserRegistrationCtl extends BaseCtl {
 				return;
 
 			} catch (ApplicationException e) {
-
 				ServletUtility.handleException(e, request, response);
 				return;
 			}

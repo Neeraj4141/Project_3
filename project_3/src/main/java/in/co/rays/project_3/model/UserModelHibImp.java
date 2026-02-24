@@ -124,7 +124,7 @@ public class UserModelHibImp implements UserModelInt {
 	}
 
 	public UserDTO findByLogin(String login) throws ApplicationException {
-		// TODO Auto-generated method stub
+
 		Session session = null;
 		UserDTO dto = null;
 		try {
@@ -147,12 +147,12 @@ public class UserModelHibImp implements UserModelInt {
 	}
 
 	public List list() throws ApplicationException {
-		// TODO Auto-generated method stub
+
 		return list(0, 0);
 	}
 
 	public List list(int pageNo, int pageSize) throws ApplicationException {
-		// TODO Auto-generated method stub
+
 		Session session = null;
 		List list = null;
 		try {
@@ -176,12 +176,11 @@ public class UserModelHibImp implements UserModelInt {
 	}
 
 	public List search(UserDTO dto) throws ApplicationException {
-		// TODO Auto-generated method stub
+
 		return search(dto, 0, 0);
 	}
 
 	public List search(UserDTO dto, int pageNo, int pageSize) throws ApplicationException {
-		// TODO Auto-generated method stub
 
 		System.out.println(
 				"hellllo" + pageNo + "....." + pageSize + "........" + dto.getId() + "......" + dto.getRoleId());
@@ -240,8 +239,7 @@ public class UserModelHibImp implements UserModelInt {
 	}
 
 	public UserDTO authenticate(String login, String password) throws ApplicationException {
-		// TODO Auto-generated method stub
-		System.out.println(login + "kkkkk" + password);
+
 		Session session = null;
 		UserDTO dto = null;
 		session = HibDataSource.getSession();
@@ -259,13 +257,13 @@ public class UserModelHibImp implements UserModelInt {
 	}
 
 	public List getRoles(UserDTO dto) throws ApplicationException {
-		// TODO Auto-generated method stub
+
 		return null;
 	}
 
 	public boolean changePassword(long id, String newPassword, String oldPassword)
 			throws ApplicationException, RecordNotFoundException {
-		// TODO Auto-generated method stub
+
 		boolean flag = false;
 		UserDTO dtoExist = null;
 
@@ -307,7 +305,7 @@ public class UserModelHibImp implements UserModelInt {
 	}
 
 	public boolean forgetPassword(String login) throws RecordNotFoundException, ApplicationException {
-		// TODO Auto-generated method stub
+
 		UserDTO userData = findByLogin(login);
 		boolean flag = false;
 		if (userData == null) {
@@ -334,7 +332,7 @@ public class UserModelHibImp implements UserModelInt {
 	}
 
 	public boolean resetPassword(UserDTO dto) throws ApplicationException, RecordNotFoundException {
-		// TODO Auto-generated method stub
+
 		String newPassword = String.valueOf(new Date().getTime()).substring(0, 4);
 		UserDTO userData = findByPK(dto.getId());
 		userData.setPassword(newPassword);
@@ -364,7 +362,7 @@ public class UserModelHibImp implements UserModelInt {
 	}
 
 	public long registerUser(UserDTO dto) throws ApplicationException, DuplicateRecordException {
-		// TODO Auto-generated method stub
+
 		long pk = add(dto);
 
 		HashMap<String, String> map = new HashMap<String, String>();
