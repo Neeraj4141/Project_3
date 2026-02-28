@@ -23,6 +23,7 @@ public class CourseModelHibImp implements CourseModelInt {
 
 	public long add(CourseDTO dto) throws ApplicationException, DuplicateRecordException {
 		// TODO Auto-generated method stub
+		System.out.println("in add");
 		Session session = null;
 		Transaction tx = null;
 		long pk = 0;

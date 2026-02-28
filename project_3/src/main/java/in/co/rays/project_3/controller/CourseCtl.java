@@ -47,11 +47,11 @@ public class CourseCtl extends BaseCtl {
 		if (DataValidator.isNull(request.getParameter("description"))) {
 			request.setAttribute("description", PropertyReader.getValue("error.require", "Description"));
 			pass = false;
-		} /*
-			 * else if (!DataValidator.isName(request.getParameter("description"))) {
-			 * request.setAttribute("description", PropertyReader.getValue("error.name",
-			 * "Description")); pass = false; }
-			 */
+		} else if (!DataValidator.isName(request.getParameter("description"))) {
+			request.setAttribute("description", PropertyReader.getValue("error.name", "Description"));
+			pass = false;
+		}
+
 		if (DataValidator.isNull(request.getParameter("duration"))) {
 			request.setAttribute("duration", PropertyReader.getValue("error.require", "Duration"));
 			pass = false;
@@ -114,9 +114,10 @@ public class CourseCtl extends BaseCtl {
 		log.debug("course ctl do post start");
 
 		String op = DataUtility.getString(request.getParameter("operation"));
+		System.out.println(op);
 
 		long id = DataUtility.getLong(request.getParameter("id"));
-
+		System.out.println(id);
 		CourseModelInt model = ModelFactory.getInstance().getCourseModel();
 
 		if (OP_SAVE.equalsIgnoreCase(op) || OP_UPDATE.equalsIgnoreCase(op)) {
@@ -124,6 +125,7 @@ public class CourseCtl extends BaseCtl {
 			CourseDTO dto = (CourseDTO) populateDTO(request);
 
 			try {
+				System.out.println(dto.getId());
 				if (id > 0) {
 					model.update(dto);
 					dto.setId(id);
@@ -131,6 +133,7 @@ public class CourseCtl extends BaseCtl {
 					ServletUtility.setDto(dto, request);
 				} else {
 
+					System.out.println(dto.getId());
 					try {
 						model.add(dto);
 						ServletUtility.setSuccessMessage("Data Successfully saved", request);

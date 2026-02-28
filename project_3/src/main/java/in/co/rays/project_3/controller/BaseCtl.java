@@ -119,11 +119,13 @@ public abstract class BaseCtl extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		System.out.println("in service");
 
 		// Load the preloaded data required to display at HTML form
 		preload(request);
 
 		String op = DataUtility.getString(request.getParameter("operation"));
+		System.out.println(op);
 
 		// Check if operation is not DELETE, VIEW, CANCEL, RESET and NULL then
 		// perform input data validation
@@ -134,12 +136,17 @@ public abstract class BaseCtl extends HttpServlet {
 			// messages
 
 			if (!validate(request)) {
+				System.out.println("in validate in baseCTL");
 				BaseDTO dto = (BaseDTO) populateDTO(request);
 				ServletUtility.setDto(dto, request);
 				ServletUtility.forward(getView(), request, response);
 				return;
 			}
 		}
+		System.out.println("server name: =====> " + request.getServerName());
+		System.out.println("submit operation hai ya nahi ==== " + response.encodeUrl(op));
+		System.out.println("super ne " + request.getMethod() + " chali");
+		System.out.println("servlet ====> " + request.getServletPath());
 		super.service(request, response);
 		System.out.println("Service base");
 	}

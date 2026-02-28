@@ -50,7 +50,7 @@ i.css {
 							<%
 								long id = DataUtility.getLong(request.getParameter("id"));
 
-								if (dto.getId() != null) {
+								if (dto.getId() != null && dto.getId() > 0) {
 							%>
 							<h3 class="text-center default-text text-primary">Update
 								Course</h3>
@@ -117,6 +117,22 @@ i.css {
 									</div>
 								</div>
 								<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("courseName", request)%></font></br>
+							<div class="md-form">
+								<span class="pl-sm-5"><b>Description</b><span
+									style="color: red;">*</span></span> </br>
+								<div class="col-sm-12">
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<div class="input-group-text">
+												<i class="fa fa-book grey-text" style="font-size: 1rem;"></i>
+											</div>
+										</div>
+										<input type="text" class="form-control" name="description"
+											placeholder="Enter description"
+											value="<%=DataUtility.getStringData(dto.getDescription())%>">
+									</div>
+								</div>
+								<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("description", request)%></font></br>
 
 								<span class="pl-sm-5"><b>Duration</b><span
 									style="color: red;">*</span></span></br>
