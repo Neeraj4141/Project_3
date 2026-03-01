@@ -15,7 +15,7 @@ body {
 	background-repeat: no-repeat;
 }
 </style>
-<body class="img-fluids">
+<body class="img-fluid">
 	<div class="p1">
 		<h1 align="Center">
 			<img src="img/custom.png" width="318" height="120" border="0">

@@ -107,26 +107,7 @@ public class HTMLUtility {
 		return sb.toString();
 	}
 
-	/*
-	 * public static String getList(String name, String selectedVal, HashMap<String,
-	 * String> map, boolean select) {
-	 * 
-	 * StringBuffer sb = new StringBuffer( "<select class='form-control' name='" +
-	 * name + "'>");
-	 * 
-	 * Set<String> keys = map.keySet(); String val = null;
-	 * 
-	 * if (select) {
-	 * 
-	 * sb.append("<option selected value=''> --Select-- </option>"); }
-	 * 
-	 * for (String key : keys) { val = map.get(key); if
-	 * (key.trim().equals(selectedVal)) { sb.append("<option selected value='" + key
-	 * + "'>" + val + "</option>"); } else { sb.append("<option value='" + key +
-	 * "'>" + val + "</option>"); } } sb.append("</select>"); return sb.toString();
-	 * }
-	 * 
-	 */
+
 	public static String getList(String name, String selectedVal, HashMap<String, String> map, boolean select) {
 
 		StringBuffer sb = new StringBuffer(
