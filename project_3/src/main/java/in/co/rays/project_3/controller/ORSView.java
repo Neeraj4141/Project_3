@@ -130,4 +130,12 @@ public interface ORSView {
 
 	public String MARKSHEET_MERIT_LIST_CTL = APP_CONTEXT + "/ctl/MarksheetMeritListCtl";
 
+	public String RESTURENT_CTL = APP_CONTEXT + "/ctl/ResturentCtl";
+
+	public String RESTURENT_LIST_CTL = APP_CONTEXT + "/ctl/ResturentListCtl";
+	
+	public String RESTURENT_VIEW = PAGE_FOLDER + "/ResturentView.jsp";
+
+	public String RESTURENT_LIST_VIEW = PAGE_FOLDER + "/ResturentListView.jsp";
+
 }

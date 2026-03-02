@@ -49,7 +49,6 @@ public final class ModelFactory {
 		return hostelModel;
 	}
 
-
 	public MarksheetModelInt getMarksheetModel() {
 		MarksheetModelInt marksheetModel = (MarksheetModelInt) modelCache.get("marksheetModel");
 		if (marksheetModel == null) {
@@ -185,5 +184,15 @@ public final class ModelFactory {
 		}
 
 		return facultyModel;
+	}
+
+	public ResturentModelInt getResturentModel() {
+		ResturentModelInt resturentmodel = (ResturentModelInt) modelCache.get("resturentmodel");
+		if (resturentmodel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				resturentmodel = new ResturentModelHibImpl();
+			}
+		}
+		return resturentmodel;
 	}
 }

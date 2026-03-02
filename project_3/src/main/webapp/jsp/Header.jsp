@@ -208,19 +208,19 @@
 						</a>
 					</div></li>
 
-				<%-- <li class="nav-item dropdown" style="padding-left: 5px"><a
+				<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> <font style="color: white;">Hostel
+					aria-expanded="false"> <font style="color: white;">Resturent
 					</font></a>
 
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-						<a class="dropdown-item" href="<%=ORSView.HOSTEL_CTL%>"><i
-							class="fa fa-file"></i>Add Hostel</a> <a class="dropdown-item"
-							href="<%=ORSView.HOSTEL_LIST_CTL%>"><i class="fa fa-paste"></i>Hostel
+						<a class="dropdown-item" href="<%=ORSView.RESTURENT_CTL%>"><i
+							class="fa fa-file"></i>Add Resturent</a> <a class="dropdown-item"
+							href="<%=ORSView.RESTURENT_LIST_CTL%>"><i class="fa fa-paste"></i>Resturent
 							List</a>
-					</div></li> --%>
+					</div></li>
 
 				<%
 					}
