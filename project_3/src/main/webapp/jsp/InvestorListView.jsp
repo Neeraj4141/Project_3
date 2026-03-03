@@ -4,6 +4,10 @@
 <%@page import="in.co.rays.project_3.util.ServletUtility"%>
 <%@page import="in.co.rays.project_3.controller.InvestorListCtl"%>
 <%@page import="in.co.rays.project_3.dto.InvestorDTO"%>
+<%@page import="in.co.rays.project_3.util.HTMLUtility"%>
+<%@page import="in.co.rays.project_3.util.PropertyReader"%>
+
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 
@@ -55,9 +59,6 @@
 			}
 
 			List list = ServletUtility.getList(request);
-
-			if (list != null && list.size() != 0) {
-				Iterator<InvestorDTO> it = list.iterator();
 		%>
 
 		<center>
@@ -65,52 +66,72 @@
 				<font color="black">Investor List</font>
 			</h1>
 		</center>
+
+		<br>
+
+		<!-- 🔍 Search Panel -->
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-3">
+					<input type="text" name="investorName" class="form-control"
+						placeholder="Investor Name"
+						value="<%=DataUtility.getStringData(dto.getInvestorName())%>">
+				</div>
+
+				<div class="col-md-3">
+					<input type="text" name="investorCode" class="form-control"
+						placeholder="Investor Code"
+						value="<%=DataUtility.getStringData(dto.getInvestorcode())%>">
+				</div>
+
+				<div class="col-md-3">
+					<input type="text" name="investmentType" class="form-control"
+						placeholder="Investment Type"
+						value="<%=DataUtility.getStringData(dto.getInvestmentType())%>">
+				</div>
+
+				<div class="col-md-3">
+					<input type="submit" name="operation"
+						class="btn btn-primary btn-md"
+						value="<%=InvestorListCtl.OP_SEARCH%>"> <input
+						type="submit" name="operation" class="btn btn-secondary btn-md"
+						value="<%=InvestorListCtl.OP_RESET%>">
+				</div>
+
+			</div>
+		</div>
+
 		<br>
 
 		<!-- Success Message -->
-		<div class="row">
-			<div class="col-md-4"></div>
-
-			<%
-				if (!ServletUtility.getSuccessMessage(request).equals("")) {
-			%>
-			<div class="col-md-4 alert alert-success alert-dismissible"
-				style="background-color: #80ff80">
-				<button type="button" class="close" data-dismiss="alert">&times;</button>
-				<h4>
-					<font color="#008000"> <%=ServletUtility.getSuccessMessage(request)%>
-					</font>
-				</h4>
-			</div>
-			<%
-				}
-			%>
-
-			<div class="col-md-4"></div>
+		<%
+			if (!ServletUtility.getSuccessMessage(request).equals("")) {
+		%>
+		<div class="alert alert-success text-center">
+			<%=ServletUtility.getSuccessMessage(request)%>
 		</div>
+		<%
+			}
+		%>
 
 		<!-- Error Message -->
-		<div class="row">
-			<div class="col-md-4"></div>
-
-			<%
-				if (!ServletUtility.getErrorMessage(request).equals("")) {
-			%>
-			<div class="col-md-4 alert alert-danger alert-dismissible">
-				<button type="button" class="close" data-dismiss="alert">&times;</button>
-				<h4>
-					<font color="red"> <%=ServletUtility.getErrorMessage(request)%>
-					</font>
-				</h4>
-			</div>
-			<%
-				}
-			%>
-
-			<div class="col-md-4"></div>
+		<%
+			if (!ServletUtility.getErrorMessage(request).equals("")) {
+		%>
+		<div class="alert alert-danger text-center">
+			<%=ServletUtility.getErrorMessage(request)%>
 		</div>
+		<%
+			}
+		%>
 
 		<br>
+
+		<%
+			if (list != null && list.size() > 0) {
+				Iterator<InvestorDTO> it = list.iterator();
+		%>
 
 		<div class="table-responsive">
 			<table class="table table-bordered table-dark table-hover">
@@ -155,6 +176,7 @@
 			</table>
 		</div>
 
+		<!-- Pagination Buttons -->
 		<table width="100%">
 			<tr>
 				<td><input type="submit" name="operation"
@@ -182,16 +204,10 @@
 		%>
 
 		<center>
-			<h1 style="font-size: 40px; padding-top: 24px; color: #162390;">
-				Investor List</h1>
+			<h2>No Record Found</h2>
+			<br> <input type="submit" name="operation"
+				class="btn btn-primary btn-md" value="<%=InvestorListCtl.OP_BACK%>">
 		</center>
-
-		<br>
-
-		<div style="padding-left: 48%;">
-			<input type="submit" name="operation" class="btn btn-primary btn-md"
-				value="<%=InvestorListCtl.OP_BACK%>">
-		</div>
 
 		<%
 			}
@@ -203,5 +219,6 @@
 	</form>
 
 </body>
+
 <%@include file="FooterView.jsp"%>
 </html>

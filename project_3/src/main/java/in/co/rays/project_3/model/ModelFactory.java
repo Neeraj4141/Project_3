@@ -195,4 +195,19 @@ public final class ModelFactory {
 		}
 		return resturentmodel;
 	}
+	
+
+	public InvestorModelInt getInvestorModel() {
+
+		InvestorModelInt investormodel = (InvestorModelInt) modelCache.get("investormodel");
+
+		if (investormodel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				investormodel = new InvestorModelHibImpl();
+			}
+		}
+
+		return investormodel;
+	}
 }

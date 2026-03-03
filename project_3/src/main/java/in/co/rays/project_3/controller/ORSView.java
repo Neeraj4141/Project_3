@@ -137,5 +137,14 @@ public interface ORSView {
 	public String RESTURENT_VIEW = PAGE_FOLDER + "/ResturentView.jsp";
 
 	public String RESTURENT_LIST_VIEW = PAGE_FOLDER + "/ResturentListView.jsp";
+	
+	public String INVESTOR_CTL = APP_CONTEXT + "/ctl/InvestorCtl";
+
+	public String INVESTOR_LIST_CTL = APP_CONTEXT + "/ctl/InvestorListCtl";
+	
+	public String INVESTOR_VIEW = PAGE_FOLDER + "/InvestorView.jsp";
+
+	public String INVESTOR_LIST_VIEW = PAGE_FOLDER + "/InvestorListView.jsp";
+
 
 }

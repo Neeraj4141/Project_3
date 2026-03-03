@@ -50,6 +50,9 @@
 		<mapping resource="in/co/rays/project_3/hbm/HostelDTO.hbm.xml" />
 		<mapping
 			resource="in/co/rays/project_3/hbm/ResturentDTO.hbm.xml" />
+			<mapping
+			resource="in/co/rays/project_3/hbm/InvestorDTO.hbm.xml" />
+			
 
 	</session-factory>
 </hibernate-configuration>
