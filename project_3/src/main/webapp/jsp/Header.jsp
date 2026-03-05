@@ -221,8 +221,8 @@
 							href="<%=ORSView.RESTURENT_LIST_CTL%>"><i class="fa fa-paste"></i>Resturent
 							List</a>
 					</div></li>
-					
-					<li class="nav-item dropdown" style="padding-left: 5px"><a
+
+				<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> <font style="color: white;">Investor
@@ -231,11 +231,25 @@
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
 						<a class="dropdown-item" href="<%=ORSView.INVESTOR_CTL%>"><i
-							class="fa fa-sort-amount-down"></i>Add Investor</a> <a class="dropdown-item"
-							href="<%=ORSView.INVESTOR_LIST_CTL%>"><i class="fa fa-paste"></i>Investor
-							List</a>
+							class="fa fa-sort-amount-down"></i>Add Investor</a> <a
+							class="dropdown-item" href="<%=ORSView.INVESTOR_LIST_CTL%>"><i
+							class="fa fa-paste"></i>Investor List</a>
 					</div></li>
-					
+
+				<li class="nav-item dropdown" style="padding-left: 5px"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">Locker
+					</font></a>
+
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+						<a class="dropdown-item" href="<%=ORSView.LOCKER_CTL%>"><i
+							class="fa fa-sort-amount-down"></i>Add Locker</a> <a
+							class="dropdown-item" href="<%=ORSView.LOCKER_LIST_CTL%>"><i
+							class="fa fa-paste"></i>LockerList List</a>
+					</div></li>
+
 
 				<%
 					}

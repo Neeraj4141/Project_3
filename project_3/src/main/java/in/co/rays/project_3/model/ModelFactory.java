@@ -195,7 +195,6 @@ public final class ModelFactory {
 		}
 		return resturentmodel;
 	}
-	
 
 	public InvestorModelInt getInvestorModel() {
 
@@ -209,5 +208,19 @@ public final class ModelFactory {
 		}
 
 		return investormodel;
+	}
+
+	public LockerModelInt getLockerModel() {
+
+		LockerModelInt lockermodel = (LockerModelInt) modelCache.get("lockermodel");
+
+		if (lockermodel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				lockermodel = new LockerModelHibImpl() {
+				};
+			}
+		}
+		return lockermodel;
 	}
 }

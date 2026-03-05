@@ -145,6 +145,14 @@ public interface ORSView {
 	public String INVESTOR_VIEW = PAGE_FOLDER + "/InvestorView.jsp";
 
 	public String INVESTOR_LIST_VIEW = PAGE_FOLDER + "/InvestorListView.jsp";
+	
+	public String LOCKER_CTL = APP_CONTEXT + "/ctl/LockerCtl";
+
+	public String LOCKER_LIST_CTL = APP_CONTEXT + "/ctl/LockerListCtl";
+	
+	public String LOCKER_VIEW = PAGE_FOLDER + "/LockerView.jsp";
+
+	public String LOCKER_LIST_VIEW = PAGE_FOLDER + "/LockerListView.jsp";
 
 
 }
