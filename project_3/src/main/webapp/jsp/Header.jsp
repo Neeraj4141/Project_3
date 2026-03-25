@@ -251,6 +251,37 @@
 					</div></li>
 
 
+				<li class="nav-item dropdown" style="padding-left: 5px"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">Portfolio
+					</font></a>
+
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+						<a class="dropdown-item" href="<%=ORSView.PORTFOLIO_CTL%>"><i
+							class="fa fa-sort-amount-down"></i>Add Portfolio</a> <a
+							class="dropdown-item" href="<%=ORSView.PORTFOLIO_LIST_CTL%>"><i
+							class="fa fa-paste"></i>Portfolio List</a>
+					</div></li>
+
+
+				<li class="nav-item dropdown" style="padding-left: 5px"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">OTPVerification
+					</font></a>
+
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+						<a class="dropdown-item" href="<%=ORSView.OTPVERIFICATION_CTL%>"><i
+							class="fa fa-sort-amount-down"></i>Add OTPVerification</a> <a
+							class="dropdown-item"
+							href="<%=ORSView.OTPVERIFICATION_LIST_CTL%>"><i
+							class="fa fa-paste"></i>OTPVerification List</a>
+					</div></li>
+
+
 				<%
 					}
 					}

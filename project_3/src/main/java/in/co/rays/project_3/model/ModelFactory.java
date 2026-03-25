@@ -217,10 +217,40 @@ public final class ModelFactory {
 		if (lockermodel == null) {
 
 			if ("Hibernate".equals(DATABASE)) {
-				lockermodel = new LockerModelHibImpl() {
-				};
+				lockermodel = new LockerModelHibImpl();
+				{
+				}
 			}
 		}
 		return lockermodel;
+	}
+
+	public PortfolioModelInt getPortfolioModel() {
+
+		PortfolioModelInt portfoliomodel = (PortfolioModelInt) modelCache.get("portfoliomodel");
+
+		if (portfoliomodel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				portfoliomodel = new PortfolioModelHibImp();
+				{
+				}
+			}
+		}
+		return portfoliomodel;
+	}
+
+	public OTPVerificationModelInt getOTPVerificationModel() {
+
+		OTPVerificationModelInt otpverificationmodel = (OTPVerificationModelInt) modelCache.get("otpverificationmodel");
+
+		if (otpverificationmodel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				otpverificationmodel = new OTPVerificationModelHibImpl();
+			}
+		}
+
+		return otpverificationmodel;
 	}
 }

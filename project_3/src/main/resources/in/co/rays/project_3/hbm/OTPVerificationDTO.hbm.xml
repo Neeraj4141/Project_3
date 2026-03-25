@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="in.co.rays.project_3.dto">
+
+    <class name="OTPVerificationDTO" table="ST_OTP_VERIFICATION">
+
+        <id name="id" type="java.lang.Long">
+            <column name="ID" />
+            <generator class="increment" />
+        </id>
+
+        <property name="otpId" type="java.lang.Long">
+            <column name="OTPID" />
+        </property>
+
+        <property name="otpCode" type="java.lang.String">
+            <column name="OTPCODE" />
+        </property>
+
+        <property name="expiryTime" type="java.util.Date">
+            <column name="EXPIRYTIME" />
+        </property>
+
+        <property name="otpValue" type="java.lang.String">
+            <column name="OTPVALUE" />
+        </property>
+
+        <property name="userName" type="java.lang.String">
+            <column name="USERNAME" />
+        </property>
+
+        <property name="otpStatus" type="java.lang.String">
+            <column name="OTPSTATUS" />
+        </property>
+
+        <!-- BaseDTO ke fields -->
+        <property name="createdBy" type="java.lang.String" length="50">
+            <column name="CREATED_BY" />
+        </property>
+
+        <property name="modifiedBy" type="java.lang.String" length="50">
+            <column name="MODIFIED_BY" />
+        </property>
+
+        <property name="createdDatetime" type="java.sql.Timestamp">
+            <column name="CREATED_DATETIME" />
+        </property>
+
+        <property name="modifiedDatetime" type="java.sql.Timestamp">
+            <column name="MODIFIED_DATETIME" />
+        </property>
+
+    </class>
+
+</hibernate-mapping>

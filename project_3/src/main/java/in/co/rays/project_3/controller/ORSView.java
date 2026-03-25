@@ -153,6 +153,22 @@ public interface ORSView {
 	public String LOCKER_VIEW = PAGE_FOLDER + "/LockerView.jsp";
 
 	public String LOCKER_LIST_VIEW = PAGE_FOLDER + "/LockerListView.jsp";
+	
+	public String PORTFOLIO_CTL = APP_CONTEXT + "/ctl/PortfolioCtl";
+
+	public String PORTFOLIO_LIST_CTL = APP_CONTEXT + "/ctl/PortfolioListCtl";
+	
+	public String PORTFOLIO_VIEW = PAGE_FOLDER + "/PortfolioView.jsp";
+
+	public String PORTFOLIO_LIST_VIEW = PAGE_FOLDER + "/PortfolioListView.jsp";
+	
+	public String OTPVERIFICATION_CTL = APP_CONTEXT + "/ctl/OTPVerificationCtl";
+
+	public String OTPVERIFICATION_LIST_CTL = APP_CONTEXT + "/ctl/OTPVerificationListCtl";
+	
+	public String OTPVERIFICATION_VIEW = PAGE_FOLDER + "/OTPVerificationView.jsp";
+
+	public String OTPVERIFICATION_LIST_VIEW = PAGE_FOLDER + "/OTPVerificationListView.jsp";
 
 
 }
