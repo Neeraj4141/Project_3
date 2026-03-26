@@ -253,4 +253,20 @@ public final class ModelFactory {
 
 		return otpverificationmodel;
 	}
+
+	public WalletModelInt getWalletModel() {
+
+		WalletModelInt walletModel = (WalletModelInt) modelCache.get("walletModel");
+
+		if (walletModel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				walletModel = new WalletModelHibImpl();
+			}
+
+			modelCache.put("walletModel", walletModel);
+		}
+
+		return walletModel;
+	}
 }

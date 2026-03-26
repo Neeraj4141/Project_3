@@ -169,6 +169,15 @@ public interface ORSView {
 	public String OTPVERIFICATION_VIEW = PAGE_FOLDER + "/OTPVerificationView.jsp";
 
 	public String OTPVERIFICATION_LIST_VIEW = PAGE_FOLDER + "/OTPVerificationListView.jsp";
+	
+	public String WALLET_CTL = APP_CONTEXT + "/ctl/WalletCtl";
+
+	public String WALLET_LIST_CTL = APP_CONTEXT + "/ctl/WalletListCtl";
+	
+	public String WALLET_VIEW = PAGE_FOLDER + "/WalletView.jsp";
+
+	public String WALLET_LIST_VIEW = PAGE_FOLDER + "/WalletListView.jsp";
+
 
 
 }
