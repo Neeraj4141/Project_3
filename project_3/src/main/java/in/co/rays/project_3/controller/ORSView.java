@@ -177,6 +177,14 @@ public interface ORSView {
 	public String WALLET_VIEW = PAGE_FOLDER + "/WalletView.jsp";
 
 	public String WALLET_LIST_VIEW = PAGE_FOLDER + "/WalletListView.jsp";
+	
+	public String CART_CTL = APP_CONTEXT + "/ctl/CartCtl";
+
+	public String CART_LIST_CTL = APP_CONTEXT + "/ctl/CartListCtl";
+	
+	public String CART_VIEW = PAGE_FOLDER + "/CartView.jsp";
+
+	public String CART_LIST_VIEW = PAGE_FOLDER + "/CartListView.jsp";
 
 
 

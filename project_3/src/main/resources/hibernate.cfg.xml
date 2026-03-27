@@ -58,6 +58,7 @@
 		<mapping
 			resource="in/co/rays/project_3/hbm/OTPVerificationDTO.hbm.xml" />
 		<mapping resource="in/co/rays/project_3/hbm/WalletDTO.hbm.xml" />
+		<mapping resource="in/co/rays/project_3/hbm/CartDTO.hbm.xml" />
 
 
 

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27-Mar-2026, 10:51:59 am by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <subclass name="in.co.rays.project_3.dto.CartDTO" extends="in.co.rays.project_3.dto.BaseDTO" discriminator-value="CartDTO" lazy="false">
+        <property name="cartId" type="long">
+            <column name="CARTID" />
+        </property>
+        <property name="cartCode" type="java.lang.String">
+            <column name="CARTCODE" />
+        </property>
+        <property name="totalItems" type="long">
+            <column name="TOTALITEMS" />
+        </property>
+        <property name="userName" type="java.lang.String">
+            <column name="USERNAME" />
+        </property>
+        <property name="status" type="java.lang.String">
+            <column name="STATUS" />
+        </property>
+    </subclass>
+</hibernate-mapping>

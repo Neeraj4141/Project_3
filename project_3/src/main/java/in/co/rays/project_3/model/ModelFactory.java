@@ -269,4 +269,18 @@ public final class ModelFactory {
 
 		return walletModel;
 	}
+	
+	public CartModelInt getCartModel() {
+
+	    CartModelInt cartModel = (CartModelInt) modelCache.get("cartModel");
+
+	    if (cartModel == null) {
+
+	        if ("Hibernate".equals(DATABASE)) {
+	            cartModel = new CartModelHibImpl();
+	        }
+	    }
+
+	    return cartModel;
+	}
 }

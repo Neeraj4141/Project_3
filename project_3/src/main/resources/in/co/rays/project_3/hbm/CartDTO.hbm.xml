@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="in.co.rays.project_3.dto">
+
+    <class name="CartDTO" table="ST_CART">
+
+        <!-- Primary Key -->
+        <id name="cartId" type="java.lang.Long">
+            <column name="CART_ID"/>
+            <generator class="increment"/>
+        </id>
+
+        <!-- Other Fields -->
+        <property name="cartCode" type="java.lang.String">
+            <column name="CART_CODE"/>
+        </property>
+
+        <property name="totalItems" type="java.lang.Long">
+            <column name="TOTAL_ITEMS"/>
+        </property>
+
+        <property name="userName" type="java.lang.String">
+            <column name="USER_NAME"/>
+        </property>
+
+        <property name="status" type="java.lang.String">
+            <column name="STATUS"/>
+        </property>
+
+        <!-- Common Fields -->
+        <property name="createdBy" type="java.lang.String">
+            <column name="CREATED_BY"/>
+        </property>
+
+        <property name="modifiedBy" type="java.lang.String">
+            <column name="MODIFIED_BY"/>
+        </property>
+
+        <property name="createdDatetime" type="java.sql.Timestamp">
+            <column name="CREATED_DATETIME"/>
+        </property>
+
+        <property name="modifiedDatetime" type="java.sql.Timestamp">
+            <column name="MODIFIED_DATETIME"/>
+        </property>
+
+    </class>
+
+</hibernate-mapping>
