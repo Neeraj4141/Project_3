@@ -22,8 +22,8 @@ body {
 		</h1>
 		<h1 align="Center">
 			<a href="<%=ORSView.WELCOME_CTL%>" style="color: red;"> <font
-				size="8px">Online Result System</font></a>
-		</h1>
+				size="8px">Online Result System today Date = 31/01/2026</font></a>
+		</h1>e
 	</div>
 </body>
 </html>
