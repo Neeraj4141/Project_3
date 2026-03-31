@@ -31,10 +31,6 @@ public class UserModelHibImp implements UserModelInt {
 
 	public long add(UserDTO dto) throws ApplicationException, DuplicateRecordException {
 
-		System.out.println("in addddddddddddd");
-		// TODO Auto-generated method stub
-		/* log.debug("usermodel hib start"); */
-
 		UserDTO existDto = null;
 		existDto = findByLogin(dto.getLogin());
 		if (existDto != null) {

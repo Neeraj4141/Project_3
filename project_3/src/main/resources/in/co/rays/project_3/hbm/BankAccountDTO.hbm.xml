@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="in.co.rays.project_3.dto">
+
+	<class name="BankAccountDTO" table="ST_BANK_ACCOUNT">
+
+		<!-- Primary Key -->
+		<id name="accountId" type="java.lang.Long">
+			<column name="ACCOUNT_ID" />
+			<generator class="increment" />
+		</id>
+
+		<!-- Other Fields -->
+		<property name="accountCode" type="java.lang.String">
+			<column name="ACCOUNT_CODE" />
+		</property>
+
+		<property name="balance" type="java.lang.String">
+			<column name="BALANCE" />
+		</property>
+
+		<property name="accountHolderName" type="java.lang.String">
+			<column name="ACCOUNT_HOLDER_NAME" />
+		</property>
+
+		<property name="status" type="java.lang.String">
+			<column name="STATUS" />
+		</property>
+
+		<!-- Common Fields -->
+		<property name="createdBy" type="java.lang.String">
+			<column name="CREATED_BY" />
+		</property>
+
+		<property name="modifiedBy" type="java.lang.String">
+			<column name="MODIFIED_BY" />
+		</property>
+
+		<property name="createdDatetime" type="java.sql.Timestamp">
+			<column name="CREATED_DATETIME" />
+		</property>
+
+		<property name="modifiedDatetime" type="java.sql.Timestamp">
+			<column name="MODIFIED_DATETIME" />
+		</property>
+
+	</class>
+
+</hibernate-mapping>

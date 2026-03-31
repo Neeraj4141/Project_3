@@ -269,18 +269,60 @@ public final class ModelFactory {
 
 		return walletModel;
 	}
-	
+
 	public CartModelInt getCartModel() {
 
-	    CartModelInt cartModel = (CartModelInt) modelCache.get("cartModel");
+		CartModelInt cartModel = (CartModelInt) modelCache.get("cartModel");
 
-	    if (cartModel == null) {
+		if (cartModel == null) {
 
-	        if ("Hibernate".equals(DATABASE)) {
-	            cartModel = new CartModelHibImpl();
-	        }
-	    }
+			if ("Hibernate".equals(DATABASE)) {
+				cartModel = new CartModelHibImpl();
+			}
+		}
 
-	    return cartModel;
+		return cartModel;
+	}
+
+	public BankAccountModelInt getBankAccountModel() {
+
+		BankAccountModelInt bankAccountModel = (BankAccountModelInt) modelCache.get("bankAccountModel");
+
+		if (bankAccountModel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				bankAccountModel = new BankAccountModelHibImpl();
+			}
+		}
+
+		return bankAccountModel;
+	}
+
+	public PolicyModelInt getPolicyModel() {
+
+		PolicyModelInt policyModel = (PolicyModelInt) modelCache.get("policyModel");
+
+		if (policyModel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				policyModel = new PolicyModelHibImpl();
+			}
+		}
+
+		return policyModel;
+	}
+
+	public ContractModelInt getContractModel() {
+
+		ContractModelInt contractModel = (ContractModelInt) modelCache.get("contractModel");
+
+		if (contractModel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				contractModel = new ContractModelHibImpl();
+			}
+		}
+
+		return contractModel;
 	}
 }

@@ -51,12 +51,11 @@ public class UserListCtl extends BaseCtl {
 		UserDTO dto = new UserDTO();
 
 		dto.setFirstName(DataUtility.getString(request.getParameter("firstName")));
-
 		dto.setLastName(DataUtility.getString(request.getParameter("lastName")));
-
 		dto.setLogin(DataUtility.getString(request.getParameter("login")));
 		dto.setRoleId(DataUtility.getLong(request.getParameter("Role")));
 		populateBean(dto, request);
+
 		return dto;
 	}
 
@@ -126,7 +125,6 @@ public class UserListCtl extends BaseCtl {
 		UserDTO dto = (UserDTO) populateDTO(request);
 		String op = DataUtility.getString(request.getParameter("operation"));
 
-
 		String[] ids = request.getParameterValues("ids");
 		UserModelInt model = ModelFactory.getInstance().getUserModel();
 		try {
@@ -166,14 +164,12 @@ public class UserListCtl extends BaseCtl {
 				return;
 			}
 			dto = (UserDTO) populateDTO(request);
-			
 
 			list = model.search(dto, pageNo, pageSize);
 			ServletUtility.setDto(dto, request);
 			next = model.search(dto, pageNo + 1, pageSize);
 
 			ServletUtility.setList(list, request);
-			
 
 			if (list == null || list.size() == 0) {
 				if (!OP_DELETE.equalsIgnoreCase(op)) {

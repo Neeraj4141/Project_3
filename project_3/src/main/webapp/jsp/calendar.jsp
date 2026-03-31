@@ -46,7 +46,7 @@
 	});
 
 	$(function() {
-		$("#datepicker2").datepicker({
+		$("#datepicker2, #datepicker3").datepicker({
 			dateFormat : 'dd/mm/yy',
 			changeMonth : true,
 			changeYear : true,

@@ -1,110 +1,84 @@
 package in.co.rays.project_3.util;
 
-
 /**
  * EmailBuilder is used to contain the configuration or getter setter
+ * 
  * @author Neeraj Mewada
  *
  */
 public class EmailMessage {
-	/**
-     * Contains comma separated TO addresses
-     */
-    private String to = null;
 
-    /**
-     * Sender addresses
-     */
-    private String from = null;
+	private String to = null;
 
-    /**
-     * Contains comma separated CC addresses
-     */
-    private String cc = null;
+	private String from = null;
 
-    /**
-     * Contains comma separated BCC addresses
-     */
-    private String bcc = null;
+	private String cc = null;
 
-    /**
-     * Contains message subject
-     */
-    private String subject = null;
+	private String bcc = null;
 
-    /**
-     * Contains message
-     */
-    private String message = null;
+	private String subject = null;
 
-    /**
-     * HTML message constant
-     */
-    public static final int HTML_MSG = 1;
+	private String message = null;
 
-    /**
-     * Text message constant
-     */
-    public static final int TEXT_MSG = 2;
+	public static final int HTML_MSG = 1;
 
-    /**
-     * Message type (HTML/text), default type is text
-     */
-    private int messageType = TEXT_MSG;
+	public static final int TEXT_MSG = 2;
 
-    public String getTo() {
-        return to;
-    }
+	private int messageType = TEXT_MSG;
 
-    public void setTo(String to) {
-        this.to = to;
-    }
+	public String getTo() {
+		return to;
+	}
 
-    public String getFrom() {
-        return from;
-    }
+	public void setTo(String to) {
+		this.to = to;
+	}
 
-    public void setFrom(String from) {
-        this.from = from;
-    }
+	public String getFrom() {
+		return from;
+	}
 
-    public String getCc() {
-        return cc;
-    }
+	public void setFrom(String from) {
+		this.from = from;
+	}
 
-    public void setCc(String cc) {
-        this.cc = cc;
-    }
+	public String getCc() {
+		return cc;
+	}
 
-    public String getBcc() {
-        return bcc;
-    }
+	public void setCc(String cc) {
+		this.cc = cc;
+	}
 
-    public void setBcc(String bcc) {
-        this.bcc = bcc;
-    }
+	public String getBcc() {
+		return bcc;
+	}
 
-    public String getSubject() {
-        return subject;
-    }
+	public void setBcc(String bcc) {
+		this.bcc = bcc;
+	}
 
-    public void setSubject(String subject) {
-        this.subject = subject;
-    }
+	public String getSubject() {
+		return subject;
+	}
 
-    public String getMessage() {
-        return message;
-    }
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
 
-    public void setMessage(String message) {
-        this.message = message;
-    }
+	public String getMessage() {
+		return message;
+	}
 
-    public int getMessageType() {
-        return messageType;
-    }
+	public void setMessage(String message) {
+		this.message = message;
+	}
 
-    public void setMessageType(int messageType) {
-        this.messageType = messageType;
-    }
+	public int getMessageType() {
+		return messageType;
+	}
+
+	public void setMessageType(int messageType) {
+		this.messageType = messageType;
+	}
 }
