@@ -210,4 +210,12 @@ public interface ORSView {
 
 	public String CONTRACT_LIST_VIEW = PAGE_FOLDER + "/ContractListView.jsp";
 
+	public String PRESCRIPTION_CTL = APP_CONTEXT + "/ctl/PrescriptionCtl";
+
+	public String PRESCRIPTION_LIST_CTL = APP_CONTEXT + "/ctl/PrescriptionListCtl";
+
+	public String PRESCRIPTION_VIEW = PAGE_FOLDER + "/PrescriptionView.jsp";
+
+	public String PRESCRIPTION_LIST_VIEW = PAGE_FOLDER + "/PrescriptionListView.jsp";
+
 }

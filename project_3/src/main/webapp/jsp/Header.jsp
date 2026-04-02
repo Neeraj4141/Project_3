@@ -295,7 +295,7 @@
 							class="fa fa-paste"></i>Wallet List</a>
 					</div></li>
 
-	<li class="nav-item dropdown" style="padding-left: 5px"><a
+				<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> <font style="color: white;">Cart
@@ -308,8 +308,8 @@
 							class="dropdown-item" href="<%=ORSView.CART_LIST_CTL%>"><i
 							class="fa fa-paste"></i>Cart List</a>
 					</div></li>
-					
-					<li class="nav-item dropdown" style="padding-left: 5px"><a
+
+				<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> <font style="color: white;">BankAccount
@@ -322,8 +322,8 @@
 							class="dropdown-item" href="<%=ORSView.BANKACCOUNT_LIST_CTL%>"><i
 							class="fa fa-paste"></i>BankAccount List</a>
 					</div></li>
-					
-						<li class="nav-item dropdown" style="padding-left: 5px"><a
+
+				<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> <font style="color: white;">Policy
@@ -336,8 +336,8 @@
 							class="dropdown-item" href="<%=ORSView.POLICY_LIST_CTL%>"><i
 							class="fa fa-paste"></i>Policy List</a>
 					</div></li>
-					
-						<li class="nav-item dropdown" style="padding-left: 5px"><a
+
+				<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> <font style="color: white;">Contract
@@ -349,6 +349,20 @@
 							class="fa fa-sort-amount-down"></i>Add Contract</a> <a
 							class="dropdown-item" href="<%=ORSView.CONTRACT_LIST_CTL%>"><i
 							class="fa fa-paste"></i>Contract List</a>
+					</div></li>
+
+				<li class="nav-item dropdown" style="padding-left: 5px"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">Prescription
+					</font></a>
+
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+						<a class="dropdown-item" href="<%=ORSView.PRESCRIPTION_CTL%>"><i
+							class="fa fa-sort-amount-down"></i>Add prescription</a> <a
+							class="dropdown-item" href="<%=ORSView.PRESCRIPTION_LIST_CTL%>"><i
+							class="fa fa-paste"></i>Prescription List</a>
 					</div></li>
 
 				<%

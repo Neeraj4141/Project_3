@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 01-Apr-2026, 11:56:10 am by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <subclass name="in.co.rays.project_3.dto.PrescriptionDTO" extends="in.co.rays.project_3.dto.BaseDTO" discriminator-value="PrescriptionDTO" lazy="false">
+        <property name="prescriptionNo" type="java.lang.Long">
+            <column name="PRESCRIPTIONNO" />
+        </property>
+        <property name="patientName" type="java.lang.String">
+            <column name="PATIENTNAME" />
+        </property>
+        <property name="doctorName" type="java.lang.String">
+            <column name="DOCTORNAME" />
+        </property>
+        <property name="prescribedDate" type="java.util.Date">
+            <column name="PRESCRIBEDDATE" />
+        </property>
+    </subclass>
+</hibernate-mapping>

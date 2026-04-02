@@ -325,4 +325,19 @@ public final class ModelFactory {
 
 		return contractModel;
 	}
+	
+	public PrescriptionModelInt getPrescriptionModel() {
+
+		PrescriptionModelInt prescriptionModel = 
+				(PrescriptionModelInt) modelCache.get("prescriptionModel");
+
+		if (prescriptionModel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				prescriptionModel = new PrescriptionModelHibImpl();
+			}
+		}
+
+		return prescriptionModel;
+	}
 }

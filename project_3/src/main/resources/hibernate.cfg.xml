@@ -63,6 +63,7 @@
 			resource="in/co/rays/project_3/hbm/BankAccountDTO.hbm.xml" />
 		<mapping resource="in/co/rays/project_3/hbm/PolicyDTO.hbm.xml" />
 		<mapping resource="in/co/rays/project_3/hbm/ContractDTO.hbm.xml" />
+		<mapping resource="in/co/rays/project_3/hbm/PrescriptionDTO.hbm.xml" />
 
 
 

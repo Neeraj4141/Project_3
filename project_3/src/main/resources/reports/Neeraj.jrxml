@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Neeraj1" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="29239a61-0fb2-4a8c-bd30-43c4b542d7b3">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Neeraj" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="778d9844-b072-41a8-93e5-9bab153d5ffe">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="neeeraj adapter"/>
 	<queryString language="SQL">
@@ -60,8 +60,11 @@
 	<title>
 		<band height="79" splitType="Stretch">
 			<staticText>
-				<reportElement x="200" y="20" width="161" height="31" uuid="4bc3e765-850d-4111-93d6-cc1c59f7a58a"/>
-				<text><![CDATA[College Merit List]]></text>
+				<reportElement x="210" y="19" width="181" height="41" uuid="eebbac13-4e13-483e-b4f6-96e22904276b"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Student Merit List]]></text>
 			</staticText>
 		</band>
 	</title>
@@ -71,44 +74,44 @@
 	<columnHeader>
 		<band height="61" splitType="Stretch">
 			<staticText>
-				<reportElement x="0" y="0" width="81" height="30" uuid="f15c51e3-ad25-4be3-867e-d67e5b7640bc">
-					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="06b1832a-ffcb-426b-a30d-e05dbd640a1f"/>
+				<reportElement x="0" y="0" width="81" height="30" uuid="b63c827d-8dc1-4da6-b737-0418f50598fc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="78590d36-8859-4a19-b330-cdb9a4485ff1"/>
 				</reportElement>
 				<text><![CDATA[ID]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="81" y="0" width="79" height="30" uuid="b66bbf4d-34a5-4210-bc09-da3c239b0a2b">
-					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="052d4633-4413-41d7-a367-d43a01ea6523"/>
+				<reportElement x="81" y="0" width="79" height="30" uuid="758e2165-4152-4a9d-b887-b989ee9ec460">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5e3cc008-fda4-4e95-a507-29341c9da3f9"/>
 				</reportElement>
 				<text><![CDATA[ROLL_NO]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="160" y="0" width="79" height="30" uuid="5a2afa73-a77b-40c7-b1cc-c053c332fbbc">
-					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1dd9dce3-9e16-4aaa-ac4b-3a440e94daad"/>
+				<reportElement x="160" y="0" width="79" height="30" uuid="df27496d-41ec-4d0e-8c65-509ea1e00c41">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4e9b8dba-6739-4de5-815e-b7471b0dc4c0"/>
 				</reportElement>
 				<text><![CDATA[NAME]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="239" y="0" width="79" height="30" uuid="e789d395-5228-4106-a928-bcb8ce99be8c">
-					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ff2e5d44-f2f3-4908-89d6-eb18ee41c75f"/>
+				<reportElement x="239" y="0" width="79" height="30" uuid="6f1bcc49-4ac0-417d-80e7-032bb2547e08">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="188723a4-7f6b-4e58-bcda-aed1157c3a38"/>
 				</reportElement>
 				<text><![CDATA[PHYSICS]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="318" y="0" width="79" height="30" uuid="ba904585-028e-40a0-ba80-d00f95049461">
-					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bf291150-773f-43dd-8f15-f607995855b1"/>
+				<reportElement x="318" y="0" width="79" height="30" uuid="4e283959-1cc8-4573-ac1c-37b062fbd005">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9f2f93d5-6931-44c6-adc8-f0fd440f8bd5"/>
 				</reportElement>
 				<text><![CDATA[CHEMISTRY]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="397" y="0" width="79" height="30" uuid="308563c1-b848-458d-8d99-8ec2a97aab3e">
-					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f3e1ffec-b925-499b-9de8-550ce071f46c"/>
+				<reportElement x="397" y="0" width="79" height="30" uuid="8187633b-103d-41e3-b544-588b5c3a4b04">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="71129c75-8793-486d-afd5-6245c97f6a20"/>
 				</reportElement>
 				<text><![CDATA[MATHS]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="476" y="0" width="79" height="30" uuid="13cf9f81-99b3-4a01-8403-8c1cffa26a0a">
-					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="860344ed-1e31-4ed1-87b5-be8ecae5ed70"/>
+				<reportElement x="476" y="0" width="79" height="30" uuid="b46ea12f-3877-4518-9900-dfdb9e9960c0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="97a03ea2-e588-4fce-8975-632546442e9c"/>
 				</reportElement>
 				<text><![CDATA[Total]]></text>
 			</staticText>
@@ -117,44 +120,47 @@
 	<detail>
 		<band height="125" splitType="Stretch">
 			<textField>
-				<reportElement x="0" y="0" width="81" height="30" uuid="1eafd07a-9539-4a08-b766-843fa95fa6cc">
-					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="06b1832a-ffcb-426b-a30d-e05dbd640a1f"/>
+				<reportElement x="0" y="0" width="81" height="30" uuid="8533d68e-8cd7-4312-bdbc-a1444a904866">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="78590d36-8859-4a19-b330-cdb9a4485ff1"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{ID}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="81" y="0" width="79" height="30" uuid="f4236faf-524e-4482-a667-9c1120573869">
-					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="052d4633-4413-41d7-a367-d43a01ea6523"/>
+				<reportElement x="81" y="0" width="79" height="30" uuid="12cd0619-4ab5-4ffa-8edb-e9c992520639">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5e3cc008-fda4-4e95-a507-29341c9da3f9"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{ROLL_NO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="160" y="0" width="79" height="30" uuid="a16b7bbb-0854-4805-8fd0-7c40f91a3da2">
-					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1dd9dce3-9e16-4aaa-ac4b-3a440e94daad"/>
+				<reportElement x="160" y="0" width="79" height="30" uuid="030d69bb-aa5d-4026-a89c-4afa377f8109">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4e9b8dba-6739-4de5-815e-b7471b0dc4c0"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{NAME}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="239" y="0" width="79" height="30" uuid="eab6d018-16d8-4f8c-b341-1990908b541e">
-					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ff2e5d44-f2f3-4908-89d6-eb18ee41c75f"/>
+				<reportElement x="239" y="0" width="79" height="30" uuid="8c505b8e-a4c4-4a48-ab62-f520c4819486">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="188723a4-7f6b-4e58-bcda-aed1157c3a38"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{PHYSICS}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="318" y="0" width="79" height="30" uuid="cb98941c-6353-48b8-873d-268905d17818">
-					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bf291150-773f-43dd-8f15-f607995855b1"/>
+				<reportElement x="318" y="0" width="79" height="30" uuid="304c5e8a-717c-4be9-ae8d-9ae94b0c62f5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9f2f93d5-6931-44c6-adc8-f0fd440f8bd5"/>
 				</reportElement>
+				<textElement>
+					<font size="10"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{CHEMISTRY}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="397" y="0" width="79" height="30" uuid="ad252152-0561-4842-aad4-67fe5f480079">
-					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f3e1ffec-b925-499b-9de8-550ce071f46c"/>
+				<reportElement x="397" y="0" width="79" height="30" uuid="a52b809d-12d3-4103-bf6b-f6b0127031e3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="71129c75-8793-486d-afd5-6245c97f6a20"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{MATHS}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="476" y="0" width="79" height="30" uuid="f1b68335-e24c-4a35-9b0c-e5ab50649efd">
-					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="860344ed-1e31-4ed1-87b5-be8ecae5ed70"/>
+				<reportElement x="476" y="0" width="79" height="30" uuid="df6d2f56-6383-4055-93c7-15e65538697a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="97a03ea2-e588-4fce-8975-632546442e9c"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{Total}]]></textFieldExpression>
 			</textField>
