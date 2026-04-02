@@ -340,4 +340,19 @@ public final class ModelFactory {
 
 		return prescriptionModel;
 	}
+	
+	public ReportModelInt getReportModel() {
+
+	    ReportModelInt reportModel = 
+	            (ReportModelInt) modelCache.get("reportModel");
+
+	    if (reportModel == null) {
+
+	        if ("Hibernate".equals(DATABASE)) {
+	            reportModel = new ReportModelHibImpl();
+	        }
+	    }
+
+	    return reportModel;
+	}
 }

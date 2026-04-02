@@ -295,7 +295,7 @@
 							class="fa fa-paste"></i>Wallet List</a>
 					</div></li>
 
-				<li class="nav-item dropdown" style="padding-left: 5px"><a
+				<%-- 	<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> <font style="color: white;">Cart
@@ -321,7 +321,7 @@
 							class="fa fa-sort-amount-down"></i>Add BankAccount</a> <a
 							class="dropdown-item" href="<%=ORSView.BANKACCOUNT_LIST_CTL%>"><i
 							class="fa fa-paste"></i>BankAccount List</a>
-					</div></li>
+					</div></li> --%>
 
 				<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
@@ -363,6 +363,21 @@
 							class="fa fa-sort-amount-down"></i>Add prescription</a> <a
 							class="dropdown-item" href="<%=ORSView.PRESCRIPTION_LIST_CTL%>"><i
 							class="fa fa-paste"></i>Prescription List</a>
+					</div></li>
+
+
+				<li class="nav-item dropdown" style="padding-left: 5px"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">Report
+					</font></a>
+
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+						<a class="dropdown-item" href="<%=ORSView.REPORT_CTL%>"><i
+							class="fa fa-sort-amount-down"></i>Add Report</a> <a
+							class="dropdown-item" href="<%=ORSView.REPORT_LIST_CTL%>"><i
+							class="fa fa-paste"></i>Report List</a>
 					</div></li>
 
 				<%

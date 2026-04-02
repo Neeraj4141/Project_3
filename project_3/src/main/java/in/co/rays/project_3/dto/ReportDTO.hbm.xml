@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 02-Apr-2026, 3:59:20 pm by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <subclass name="in.co.rays.project_3.dto.ReportDTO" extends="in.co.rays.project_3.dto.BaseDTO" discriminator-value="ReportDTO" lazy="false">
+        <property name="repairNo" type="java.lang.Long">
+            <column name="REPAIRNO" />
+        </property>
+        <property name="cost" type="java.lang.String">
+            <column name="COST" />
+        </property>
+        <property name="repairDate" type="java.util.Date">
+            <column name="REPAIRDATE" />
+        </property>
+        <property name="deviceName" type="java.lang.String">
+            <column name="DEVICENAME" />
+        </property>
+    </subclass>
+</hibernate-mapping>
