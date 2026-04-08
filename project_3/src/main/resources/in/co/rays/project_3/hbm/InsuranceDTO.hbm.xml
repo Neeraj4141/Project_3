@@ -4,38 +4,37 @@
 
 <hibernate-mapping package="in.co.rays.project_3.dto">
 
-	<class name="ContractDTO" table="ST_CONTRACT">
+	<class name="InsuranceDTO" table="ST_INSURANCE">
 
+		<!-- Primary Key -->
 		<id name="id" type="java.lang.Long">
-			<column name="ID"></column>
-			<generator class="increment"></generator>
+			<column name="ID" />
+			<generator class="increment" />
 		</id>
 
-		<property name="contractCode" type="java.lang.String">
-			<column name="CONTRACTCODE" />
+		<!-- Insurance Fields -->
+		<property name="insuranceCode" type="java.lang.String">
+			<column name="INSURANCECODE" />
 		</property>
 
-		<property name="contractName" type="java.lang.String">
-			<column name="CONTRACTNAME" />
+		<property name="premiumAmount" type="long">
+			<column name="PREMIUMAMOUNT" />
 		</property>
 
-		<property name="startDate" type="java.util.Date">
-			<column name="STARTDATE" />
+		<property name="policyHolder" type="java.lang.String">
+			<column name="POLICYHOLDER" />
 		</property>
 
-		<property name="endDate" type="java.util.Date">
-			<column name="ENDDATE" />
+		<property name="status" type="java.lang.String">
+			<column name="STATUS" />
 		</property>
 
-		<!-- Common Fields ! -->
-
-		<property name="createdBy" type="java.lang.String"
-			length="50">
+		<!-- BaseDTO fields -->
+		<property name="createdBy" type="java.lang.String">
 			<column name="CREATED_BY" />
 		</property>
 
-		<property name="modifiedBy" type="java.lang.String"
-			length="50">
+		<property name="modifiedBy" type="java.lang.String">
 			<column name="MODIFIED_BY" />
 		</property>
 

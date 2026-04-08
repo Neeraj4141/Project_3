@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.ResourceBundle;
 
 /**
- * ModelFactory decides which model implementation run
+ * ModelFactory decides which model implementation run ---
  * 
  * @author Neeraj Mewada
  * 
@@ -354,5 +354,20 @@ public final class ModelFactory {
 	    }
 
 	    return reportModel;
+	}
+	
+	public InsuranceModelInt getInsuranceModel() {
+
+	    InsuranceModelInt insuranceModel = 
+	            (InsuranceModelInt) modelCache.get("insuranceModel");
+
+	    if (insuranceModel == null) {
+
+	        if ("Hibernate".equals(DATABASE)) {
+	            insuranceModel = new InsuranceModelHibImpl();
+	        }
+	    }
+
+	    return insuranceModel;
 	}
 }

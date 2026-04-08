@@ -337,19 +337,7 @@
 							class="fa fa-paste"></i>Policy List</a>
 					</div></li>
 
-				<li class="nav-item dropdown" style="padding-left: 5px"><a
-					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> <font style="color: white;">Contract
-					</font></a>
 
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-
-						<a class="dropdown-item" href="<%=ORSView.CONTRACT_CTL%>"><i
-							class="fa fa-sort-amount-down"></i>Add Contract</a> <a
-							class="dropdown-item" href="<%=ORSView.CONTRACT_LIST_CTL%>"><i
-							class="fa fa-paste"></i>Contract List</a>
-					</div></li>
 
 				<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
@@ -379,6 +367,34 @@
 							class="dropdown-item" href="<%=ORSView.REPORT_LIST_CTL%>"><i
 							class="fa fa-paste"></i>Report List</a>
 					</div></li>
+
+				<li class="nav-item dropdown" style="padding-left: 5px"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">Insurance
+					</font></a>
+
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+						<a class="dropdown-item" href="<%=ORSView.INSURANCE_CTL%>"><i
+							class="fa fa-sort-amount-down"></i>Add Insurance</a> <a
+							class="dropdown-item" href="<%=ORSView.INSURANCE_LIST_CTL%>"><i
+							class="fa fa-paste"></i>Insurance List</a>
+					</div></li>
+				<li class="nav-item dropdown" style="padding-left: 5px"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">Contract
+					</font></a>
+
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+						<a class="dropdown-item" href="<%=ORSView.CONTRACT_CTL%>"><i
+							class="fa fa-sort-amount-down"></i>Add Contract</a> <a
+							class="dropdown-item" href="<%=ORSView.CONTRACT_LIST_CTL%>"><i
+							class="fa fa-paste"></i>Contract List</a>
+					</div></li>
+
 
 				<%
 					}

@@ -2,6 +2,10 @@ package in.co.rays.project_3.dto;
 
 import java.util.Date;
 
+/**
+ * @author Win10 Pro
+ *
+ */
 public class ContractDTO extends BaseDTO {
 
 	private String contractCode;

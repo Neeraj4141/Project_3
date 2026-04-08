@@ -1,7 +1,7 @@
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.List"%>
-<%@page import="in.co.rays.project_3.dto.ContractDTO"%>
-<%@page import="in.co.rays.project_3.controller.ContractListCtl"%>
+<%@page import="in.co.rays.project_3.dto.InsuranceDTO"%>
+<%@page import="in.co.rays.project_3.controller.InsuranceListCtl"%>
 <%@page import="in.co.rays.project_3.util.DataUtility"%>
 <%@page import="in.co.rays.project_3.util.ServletUtility"%>
 <%@page import="in.co.rays.project_3.controller.ORSView"%>
@@ -9,10 +9,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Contract List</title>
+<title>Insurance List</title>
 <script src="<%=ORSView.APP_CONTEXT%>/js/jquery.min.js"></script>
 <script type="text/javascript"
 	src="<%=ORSView.APP_CONTEXT%>/js/CheckBox11.js"></script>
+
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -33,10 +34,10 @@
 
 <body class="hm">
 
-	<form class="pb-5" action="<%=ORSView.CONTRACT_LIST_CTL%>"
+	<form class="pb-5" action="<%=ORSView.INSURANCE_LIST_CTL%>"
 		method="post">
 
-		<jsp:useBean id="dto" class="in.co.rays.project_3.dto.ContractDTO"
+		<jsp:useBean id="dto" class="in.co.rays.project_3.dto.InsuranceDTO"
 			scope="request" />
 
 		<%
@@ -46,12 +47,12 @@
 			int nextPageSize = DataUtility.getInt(request.getAttribute("nextListSize").toString());
 
 			List list = ServletUtility.getList(request);
-			Iterator<ContractDTO> it = list.iterator();
+			Iterator<InsuranceDTO> it = list.iterator();
 		%>
 
 		<center>
 			<h1 class="text-dark font-weight-bold pt-3">
-				<u>Contract List</u>
+				<u>Insurance List</u>
 			</h1>
 		</center>
 
@@ -102,16 +103,16 @@
 			<div class="col-sm-2"></div>
 
 			<div class="col-sm-3">
-				<input type="text" name="contractName"
-					placeholder="Enter Contract Name" class="form-control"
-					value="<%=ServletUtility.getParameter("contractName", request)%>">
+				<input type="text" name="policyHolder"
+					placeholder="Enter Policy Holder" class="form-control"
+					value="<%=ServletUtility.getParameter("policyHolder", request)%>">
 			</div>
 
 			<div class="col-sm-3">
 				<input type="submit" class="btn btn-primary" name="operation"
-					value="<%=ContractListCtl.OP_SEARCH%>"> <input
+					value="<%=InsuranceListCtl.OP_SEARCH%>"> <input
 					type="submit" class="btn btn-dark" name="operation"
-					value="<%=ContractListCtl.OP_RESET%>">
+					value="<%=InsuranceListCtl.OP_RESET%>">
 			</div>
 
 		</div>
@@ -128,10 +129,10 @@
 						<th width="10%"><input type="checkbox" id="select_all"
 							name="Select" class="text"> Select All</th>
 						<th class="text">S.NO</th>
-						<th class="text">Contract Code</th>
-						<th class="text">Contract Name</th>
-						<th class="text">Start Date</th>
-						<th class="text">End Date</th>
+						<th class="text">Insurance Code</th>
+						<th class="text">Policy Holder</th>
+						<th class="text">Premium Amount</th>
+						<th class="text">Status</th>
 						<th class="text">Edit</th>
 
 					</tr>
@@ -150,12 +151,12 @@
 							name="ids" value="<%=dto.getId()%>"></td>
 
 						<td class="text"><%=index++%></td>
-						<td class="text"><%=dto.getContractCode()%></td>
-						<td class="text"><%=dto.getContractName()%></td>
-						<td class="text"><%=DataUtility.getDateString(dto.getStartDate())%></td>
-						<td class="text"><%=DataUtility.getDateString(dto.getEndDate())%></td>
+						<td class="text"><%=dto.getInsuranceCode()%></td>
+						<td class="text"><%=dto.getPolicyHolder()%></td>
+						<td class="text"><%=dto.getPremiumAmount()%></td>
+						<td class="text"><%=dto.getStatus()%></td>
 
-						<td class="text"><a href="ContractCtl?id=<%=dto.getId()%>">Edit</a>
+						<td class="text"><a href="InsuranceCtl?id=<%=dto.getId()%>">Edit</a>
 						</td>
 
 					</tr>
@@ -173,19 +174,19 @@
 			<tr>
 
 				<td><input type="submit" name="operation"
-					class="btn btn-warning" value="<%=ContractListCtl.OP_PREVIOUS%>"
+					class="btn btn-warning" value="<%=InsuranceListCtl.OP_PREVIOUS%>"
 					<%=pageNo > 1 ? "" : "disabled"%>></td>
 
 				<td><input type="submit" name="operation"
-					class="btn btn-primary" value="<%=ContractListCtl.OP_NEW%>">
+					class="btn btn-primary" value="<%=InsuranceListCtl.OP_NEW%>">
 				</td>
 
 				<td><input type="submit" name="operation"
-					class="btn btn-danger" value="<%=ContractListCtl.OP_DELETE%>">
+					class="btn btn-danger" value="<%=InsuranceListCtl.OP_DELETE%>">
 				</td>
 
 				<td align="right"><input type="submit" name="operation"
-					class="btn btn-warning" value="<%=ContractListCtl.OP_NEXT%>"
+					class="btn btn-warning" value="<%=InsuranceListCtl.OP_NEXT%>"
 					<%=(nextPageSize != 0) ? "" : "disabled"%>></td>
 
 			</tr>

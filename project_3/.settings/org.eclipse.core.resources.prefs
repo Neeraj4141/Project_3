@@ -5,6 +5,7 @@ encoding//src/main/resources=UTF-8
 encoding//src/main/webapp/jsp/BankAccountListView.jsp=UTF-8
 encoding//src/main/webapp/jsp/CartListView.jsp=UTF-8
 encoding//src/main/webapp/jsp/ContractListView.jsp=UTF-8
+encoding//src/main/webapp/jsp/InsuranceListView.jsp=UTF-8
 encoding//src/main/webapp/jsp/InvestorListView.jsp=UTF-8
 encoding//src/main/webapp/jsp/PolicyListView.jsp=UTF-8
 encoding//src/main/webapp/jsp/PrescriptionListView.jsp=UTF-8

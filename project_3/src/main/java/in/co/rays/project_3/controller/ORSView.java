@@ -226,4 +226,12 @@ public interface ORSView {
 
 	public String REPORT_LIST_VIEW = PAGE_FOLDER + "/ReportListView.jsp";
 
+	public String INSURANCE_CTL = APP_CONTEXT + "/ctl/InsuranceCtl";
+
+	public String INSURANCE_LIST_CTL = APP_CONTEXT + "/ctl/InsuranceListCtl";
+
+	public String INSURANCE_VIEW = PAGE_FOLDER + "/InsuranceView.jsp";
+
+	public String INSURANCE_LIST_VIEW = PAGE_FOLDER + "/InsuranceListView.jsp";
+
 }

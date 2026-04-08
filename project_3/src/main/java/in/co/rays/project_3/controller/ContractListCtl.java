@@ -19,8 +19,10 @@ import in.co.rays.project_3.util.DataUtility;
 import in.co.rays.project_3.util.PropertyReader;
 import in.co.rays.project_3.util.ServletUtility;
 
+
 /**
- * Contract List Controller
+ * @author Win10 Pro
+ *
  */
 @WebServlet(name = "ContractListCtl", urlPatterns = { "/ctl/ContractListCtl" })
 public class ContractListCtl extends BaseCtl {

@@ -104,7 +104,7 @@ i.css {
 
 						<input type="hidden" name="id" value="<%=dto.getId()%>">
 
-						<!-- CONTRACT CODE -->
+						<!--- CONTRACT CODE --->
 						<span class="pl-sm-5"><b>Contract Code *</b></span>
 						<div class="col-sm-12">
 							<div class="input-group">
@@ -126,7 +126,7 @@ i.css {
 						<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("contractName", request)%>
 						</font></br>
 
-						<!-- START DATE -->
+						<!--- START DATE --->
 						<span class="pl-sm-5"><b>Start Date *</b></span>
 						<div class="col-sm-12">
 							<div class="input-group">
