@@ -1,5 +1,5 @@
 <%@page import="java.util.List"%>
-<%@page import="in.co.rays.project_3.controller.ContractCtl"%>
+<%@page import="in.co.rays.project_3.controller.SpaceMissionCtl"%>
 <%@page import="in.co.rays.project_3.util.DataUtility"%>
 <%@page import="in.co.rays.project_3.util.ServletUtility"%>
 <%@page import="in.co.rays.project_3.controller.ORSView"%>
@@ -8,7 +8,7 @@
 
 <html>
 <head>
-<title>Contract view</title>
+<title>Space Mission view</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style type="text/css">
@@ -47,9 +47,9 @@ i.css {
 		<%@include file="calendar.jsp"%>
 	</div>
 
-	<form action="<%=ORSView.CONTRACT_CTL%>" method="post">
+	<form action="<%=ORSView.SPACEMISSION_CTL%>" method="post">
 
-		<jsp:useBean id="dto" class="in.co.rays.project_3.dto.ContractDTO"
+		<jsp:useBean id="dto" class="in.co.rays.project_3.dto.SpaceMissionDTO"
 			scope="request"></jsp:useBean>
 
 		<div class="row pt-3">
@@ -62,15 +62,15 @@ i.css {
 						<%
 							long id = DataUtility.getLong(request.getParameter("id"));
 
-							if (dto.getContractName() != null && dto.getId() != null && dto.getId() > 0) {
+							if (dto.getMissionName() != null && dto.getId() != null && dto.getId() > 0) {
 						%>
 						<h3 class="text-center default-text text-primary">Update
-							Contract</h3>
+							Space Mission</h3>
 						<%
 							} else {
 						%>
-						<h3 class="text-center default-text text-primary">Add
-							Contract</h3>
+						<h3 class="text-center default-text text-primary">Add Space
+							Mission</h3>
 						<%
 							}
 						%>
@@ -104,77 +104,76 @@ i.css {
 
 						<input type="hidden" name="id" value="<%=dto.getId()%>">
 
-						<!--- CONTRACT CODE --->
-					<span class="pl-sm-5"><b>Contract Code</b> <span
-									style="color: red;">*</span></span> </br>
-								<div class="col-sm-12">
-									<div class="input-group">
-										<div class="input-group-prepend">
-											<div class="input-group-text">
-												<i class="fa fa-key grey-text" style="font-size: 1rem;"></i>
-											</div>
-										</div>
-										<input type="text" class="form-control" name="contractCode"
-											placeholder="Contract Code"
-											value="<%=DataUtility.getStringData(dto.getContractCode())%>">
-									</div>
-								</div>
-								<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("contractCode", request)%></font></br>
-
-						<!-- CONTRACT NAME -->
-						<span class="pl-sm-5"><b>Contract Name</b> <span
-									style="color: red;">*</span></span> </br>
-								<div class="col-sm-12">
-									<div class="input-group">
-										<div class="input-group-prepend">
-											<div class="input-group-text">
-												<i class="fa fa-user grey-text" style="font-size: 1rem;"></i>
-											</div>
-										</div>
-										<input type="text" class="form-control" name="contractName"
-											placeholder="Contract Name"
-											value="<%=DataUtility.getStringData(dto.getContractName())%>">
-									</div>
-								</div>
-								<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("contractName", request)%></font></br>
-
-						<!--- START DATE --->
-						<span class="pl-sm-5"><b>Start Date *</b></span>
+						<!-- MISSION NAME -->
+						<span class="pl-sm-5"><b>Mission Name</b> <span
+							style="color: red;">*</span></span> </br>
 						<div class="col-sm-12">
 							<div class="input-group">
 								<div class="input-group-prepend">
 									<div class="input-group-text">
-										<i class="fa fa-calendar grey-text"></i>
+										<i class="fa fa-user grey-text"></i>
 									</div>
 								</div>
-
-								<input type="text" id="datepicker2" name="startDate"
-									class="form-control" readonly="readonly"
-									style="background-color: white;"
-									value="<%=DataUtility.getDateString(dto.getStartDate())%>">
+								<input type="text" class="form-control" name="missionName"
+									placeholder="Mission Name"
+									value="<%=DataUtility.getStringData(dto.getMissionName())%>">
 							</div>
 						</div>
-						<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("startDate", request)%>
+						<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("missionName", request)%>
 						</font></br>
 
-						<!-- END DATE -->
-						<span class="pl-sm-5"><b>End Date *</b></span>
+						<!-- LAUNCH VEHICAL -->
+						<span class="pl-sm-5"><b>Launch Vehical</b> <span
+							style="color: red;">*</span></span> </br>
 						<div class="col-sm-12">
 							<div class="input-group">
 								<div class="input-group-prepend">
 									<div class="input-group-text">
-										<i class="fa fa-calendar grey-text"></i>
+										<i class="fa fa-rocket grey-text"></i>
 									</div>
 								</div>
-
-								<input type="text" id="datepicker3" name="endDate"
-									class="form-control" readonly="readonly"
-									style="background-color: white;"
-									value="<%=DataUtility.getDateString(dto.getEndDate())%>">
+								<input type="text" class="form-control" name="launchVehical"
+									placeholder="Launch Vehical"
+									value="<%=DataUtility.getStringData(dto.getLaunchVehical())%>">
 							</div>
 						</div>
+						<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("launchVehical", request)%>
+						</font></br>
 
-						<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("endDate", request)%>
+						<!-- DESTINATION -->
+						<span class="pl-sm-5"><b>Destination</b> <span
+							style="color: red;">*</span></span> </br>
+						<div class="col-sm-12">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<div class="input-group-text">
+										<i class="fa fa-map-marker grey-text"></i>
+									</div>
+								</div>
+								<input type="text" class="form-control" name="destination"
+									placeholder="Destination"
+									value="<%=DataUtility.getStringData(dto.getDestination())%>">
+							</div>
+						</div>
+						<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("destination", request)%>
+						</font></br>
+
+						<!-- MISSION STATUS -->
+						<span class="pl-sm-5"><b>Mission Status</b> <span
+							style="color: red;">*</span></span> </br>
+						<div class="col-sm-12">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<div class="input-group-text">
+										<i class="fa fa-info-circle grey-text"></i>
+									</div>
+								</div>
+								<input type="text" class="form-control" name="missionStatus"
+									placeholder="Mission Status"
+									value="<%=DataUtility.getStringData(dto.getMissionStatus())%>">
+							</div>
+						</div>
+						<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("missionStatus", request)%>
 						</font></br>
 
 						<!-- BUTTON -->
@@ -185,17 +184,17 @@ i.css {
 							%>
 							<input type="submit" name="operation"
 								class="btn btn-success btn-md"
-								value="<%=ContractCtl.OP_UPDATE%>"> <input type="submit"
-								name="operation" class="btn btn-warning btn-md"
-								value="<%=ContractCtl.OP_CANCEL%>">
+								value="<%=SpaceMissionCtl.OP_UPDATE%>"> <input
+								type="submit" name="operation" class="btn btn-warning btn-md"
+								value="<%=SpaceMissionCtl.OP_CANCEL%>">
 							<%
 								} else {
 							%>
 							<input type="submit" name="operation"
-								class="btn btn-success btn-md" value="<%=ContractCtl.OP_SAVE%>">
-
-							<input type="submit" name="operation"
-								class="btn btn-warning btn-md" value="<%=ContractCtl.OP_RESET%>">
+								class="btn btn-success btn-md"
+								value="<%=SpaceMissionCtl.OP_SAVE%>"> <input
+								type="submit" name="operation" class="btn btn-warning btn-md"
+								value="<%=SpaceMissionCtl.OP_RESET%>">
 							<%
 								}
 							%>

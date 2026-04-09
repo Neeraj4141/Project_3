@@ -234,4 +234,12 @@ public interface ORSView {
 
 	public String INSURANCE_LIST_VIEW = PAGE_FOLDER + "/InsuranceListView.jsp";
 
+	public String SPACEMISSION_CTL = APP_CONTEXT + "/ctl/SpaceMissionCtl";
+
+	public String SPACEMISSION_LIST_CTL = APP_CONTEXT + "/ctl/SpaceMissionListCtl";
+
+	public String SPACEMISSION_VIEW = PAGE_FOLDER + "/SpaceMissionView.jsp";
+
+	public String SPACEMISSION_LIST_VIEW = PAGE_FOLDER + "/SpaceMissionListView.jsp";
+
 }

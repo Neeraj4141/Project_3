@@ -325,11 +325,10 @@ public final class ModelFactory {
 
 		return contractModel;
 	}
-	
+
 	public PrescriptionModelInt getPrescriptionModel() {
 
-		PrescriptionModelInt prescriptionModel = 
-				(PrescriptionModelInt) modelCache.get("prescriptionModel");
+		PrescriptionModelInt prescriptionModel = (PrescriptionModelInt) modelCache.get("prescriptionModel");
 
 		if (prescriptionModel == null) {
 
@@ -340,34 +339,46 @@ public final class ModelFactory {
 
 		return prescriptionModel;
 	}
-	
+
 	public ReportModelInt getReportModel() {
 
-	    ReportModelInt reportModel = 
-	            (ReportModelInt) modelCache.get("reportModel");
+		ReportModelInt reportModel = (ReportModelInt) modelCache.get("reportModel");
 
-	    if (reportModel == null) {
+		if (reportModel == null) {
 
-	        if ("Hibernate".equals(DATABASE)) {
-	            reportModel = new ReportModelHibImpl();
-	        }
-	    }
+			if ("Hibernate".equals(DATABASE)) {
+				reportModel = new ReportModelHibImpl();
+			}
+		}
 
-	    return reportModel;
+		return reportModel;
 	}
-	
+
 	public InsuranceModelInt getInsuranceModel() {
 
-	    InsuranceModelInt insuranceModel = 
-	            (InsuranceModelInt) modelCache.get("insuranceModel");
+		InsuranceModelInt insuranceModel = (InsuranceModelInt) modelCache.get("insuranceModel");
 
-	    if (insuranceModel == null) {
+		if (insuranceModel == null) {
 
-	        if ("Hibernate".equals(DATABASE)) {
-	            insuranceModel = new InsuranceModelHibImpl();
-	        }
-	    }
+			if ("Hibernate".equals(DATABASE)) {
+				insuranceModel = new InsuranceModelHibImpl();
+			}
+		}
 
-	    return insuranceModel;
+		return insuranceModel;
+	}
+
+	public SpaceMissionModelInt getSpaceMissionModel() {
+
+		SpaceMissionModelInt spaceMissionModel = (SpaceMissionModelInt) modelCache.get("spaceMissionModel");
+
+		if (spaceMissionModel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				spaceMissionModel = new SpaceMissionModelHibImpl();
+			}
+		}
+
+		return spaceMissionModel;
 	}
 }

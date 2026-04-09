@@ -339,7 +339,7 @@
 
 
 
-				<li class="nav-item dropdown" style="padding-left: 5px"><a
+				<%-- 	<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> <font style="color: white;">Prescription
@@ -351,7 +351,7 @@
 							class="fa fa-sort-amount-down"></i>Add prescription</a> <a
 							class="dropdown-item" href="<%=ORSView.PRESCRIPTION_LIST_CTL%>"><i
 							class="fa fa-paste"></i>Prescription List</a>
-					</div></li>
+					</div></li> --%>
 
 
 				<li class="nav-item dropdown" style="padding-left: 5px"><a
@@ -393,6 +393,19 @@
 							class="fa fa-sort-amount-down"></i>Add Contract</a> <a
 							class="dropdown-item" href="<%=ORSView.CONTRACT_LIST_CTL%>"><i
 							class="fa fa-paste"></i>Contract List</a>
+					</div></li>
+				<li class="nav-item dropdown" style="padding-left: 5px"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">SpaceMission
+					</font></a>
+
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+						<a class="dropdown-item" href="<%=ORSView.SPACEMISSION_CTL%>"><i
+							class="fa fa-sort-amount-down"></i>Add SpaceMission</a> <a
+							class="dropdown-item" href="<%=ORSView.SPACEMISSION_LIST_CTL%>"><i
+							class="fa fa-paste"></i>SpaceMission List</a>
 					</div></li>
 
 

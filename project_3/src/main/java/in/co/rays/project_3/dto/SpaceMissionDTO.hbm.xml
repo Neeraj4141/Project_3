@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 09-Apr-2026, 10:58:32 am by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <subclass name="in.co.rays.project_3.dto.SpaceMissionDTO" extends="in.co.rays.project_3.dto.BaseDTO" discriminator-value="SpaceMissionDTO" lazy="false">
+        <property name="missionName" type="java.lang.String">
+            <column name="MISSIONNAME" />
+        </property>
+        <property name="launchVehical" type="java.lang.String">
+            <column name="LAUNCHVEHICAL" />
+        </property>
+        <property name="destination" type="java.lang.String">
+            <column name="DESTINATION" />
+        </property>
+        <property name="missionStatus" type="java.lang.String">
+            <column name="MISSIONSTATUS" />
+        </property>
+    </subclass>
+</hibernate-mapping>
