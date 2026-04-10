@@ -75,7 +75,7 @@ i.css {
 							}
 						%>
 
-						<!-- Messages -->
+
 						<H4 align="center">
 							<%
 								if (!ServletUtility.getSuccessMessage(request).equals("")) {
@@ -102,41 +102,39 @@ i.css {
 							%>
 						</H4>
 
-						<input type="hidden" name="id" value="<%=dto.getId()%>">
-
-						<!--- CONTRACT CODE --->
-					<span class="pl-sm-5"><b>Contract Code</b> <span
-									style="color: red;">*</span></span> </br>
-								<div class="col-sm-12">
-									<div class="input-group">
-										<div class="input-group-prepend">
-											<div class="input-group-text">
-												<i class="fa fa-key grey-text" style="font-size: 1rem;"></i>
-											</div>
-										</div>
-										<input type="text" class="form-control" name="contractCode"
-											placeholder="Contract Code"
-											value="<%=DataUtility.getStringData(dto.getContractCode())%>">
+						<input type="hidden" name="id" value="<%=dto.getId()%>"> <span
+							class="pl-sm-5"><b>Contract Code</b> <span
+							style="color: red;">*</span></span> </br>
+						<div class="col-sm-12">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<div class="input-group-text">
+										<i class="fa fa-key grey-text" style="font-size: 1rem;"></i>
 									</div>
 								</div>
-								<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("contractCode", request)%></font></br>
+								<input type="text" class="form-control" name="contractCode"
+									placeholder="Contract Code"
+									value="<%=DataUtility.getStringData(dto.getContractCode())%>">
+							</div>
+						</div>
+						<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("contractCode", request)%></font></br>
 
 						<!-- CONTRACT NAME -->
 						<span class="pl-sm-5"><b>Contract Name</b> <span
-									style="color: red;">*</span></span> </br>
-								<div class="col-sm-12">
-									<div class="input-group">
-										<div class="input-group-prepend">
-											<div class="input-group-text">
-												<i class="fa fa-user grey-text" style="font-size: 1rem;"></i>
-											</div>
-										</div>
-										<input type="text" class="form-control" name="contractName"
-											placeholder="Contract Name"
-											value="<%=DataUtility.getStringData(dto.getContractName())%>">
+							style="color: red;">*</span></span> </br>
+						<div class="col-sm-12">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<div class="input-group-text">
+										<i class="fa fa-user grey-text" style="font-size: 1rem;"></i>
 									</div>
 								</div>
-								<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("contractName", request)%></font></br>
+								<input type="text" class="form-control" name="contractName"
+									placeholder="Contract Name"
+									value="<%=DataUtility.getStringData(dto.getContractName())%>">
+							</div>
+						</div>
+						<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("contractName", request)%></font></br>
 
 						<!--- START DATE --->
 						<span class="pl-sm-5"><b>Start Date *</b></span>

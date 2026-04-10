@@ -37,17 +37,14 @@ public class ContractCtl extends BaseCtl {
 		if (DataValidator.isNull(request.getParameter("contractName"))) {
 			request.setAttribute("contractName", PropertyReader.getValue("error.require", "Contract Name"));
 			pass = false;
-		}else if(!DataValidator.isName(request.getParameter("contractName"))){
+		} else if (!DataValidator.isName(request.getParameter("contractName"))) {
 			request.setAttribute("contractName", "Please enter correct name");
-			
+			pass = false;
 		}
 
 		if (DataValidator.isNull(request.getParameter("contractCode"))) {
 			request.setAttribute("contractCode", PropertyReader.getValue("error.require", "Contract Code"));
 			pass = false;
-		}else if(!DataValidator.isName(request.getParameter("contractCode"))){
-			request.setAttribute("contractCode", "Please enter correct code");
-			
 		}
 
 		if (DataValidator.isNull(request.getParameter("startDate"))) {
@@ -90,7 +87,7 @@ public class ContractCtl extends BaseCtl {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
 
-		log.debug("ContractCtl doGet Started");
+		log.debug("ContractCtl doGet method Started");
 
 		String op = DataUtility.getString(request.getParameter("operation"));
 

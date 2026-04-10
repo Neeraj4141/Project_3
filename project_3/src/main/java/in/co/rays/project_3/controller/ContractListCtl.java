@@ -47,7 +47,7 @@ public class ContractListCtl extends BaseCtl {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		log.debug("ContractListCtl doGet Start");
+		log.debug("ContractListCtl doGet Method Start");
 
 		List list;
 		List next;
@@ -93,7 +93,7 @@ public class ContractListCtl extends BaseCtl {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		log.debug("ContractListCtl doPost Start");
+		log.debug("ContractListCtl doPost method Start ");
 
 		List list = null;
 		List next = null;

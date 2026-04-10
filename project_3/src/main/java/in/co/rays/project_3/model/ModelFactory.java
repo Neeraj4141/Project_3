@@ -312,20 +312,6 @@ public final class ModelFactory {
 		return policyModel;
 	}
 
-	public ContractModelInt getContractModel() {
-
-		ContractModelInt contractModel = (ContractModelInt) modelCache.get("contractModel");
-
-		if (contractModel == null) {
-
-			if ("Hibernate".equals(DATABASE)) {
-				contractModel = new ContractModelHibImpl();
-			}
-		}
-
-		return contractModel;
-	}
-
 	public PrescriptionModelInt getPrescriptionModel() {
 
 		PrescriptionModelInt prescriptionModel = (PrescriptionModelInt) modelCache.get("prescriptionModel");
@@ -380,5 +366,19 @@ public final class ModelFactory {
 		}
 
 		return spaceMissionModel;
+	}
+
+	public ContractModelInt getContractModel() {
+
+		ContractModelInt contractModel = (ContractModelInt) modelCache.get("contractModel");
+
+		if (contractModel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				contractModel = new ContractModelHibImpl();
+			}
+		}
+
+		return contractModel;
 	}
 }

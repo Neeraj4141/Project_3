@@ -46,11 +46,6 @@ public class UserCtl extends BaseCtl {
 		List list;
 		try {
 			list = model.list();
-			Iterator it = list.iterator();
-
-			while (it.hasNext()) {
-				RoleDTO dto = (RoleDTO) it.next();
-			}
 
 			request.setAttribute("roleList", list);
 		} catch (ApplicationException e) {
@@ -158,7 +153,7 @@ public class UserCtl extends BaseCtl {
 		dto.setMobileNo(DataUtility.getString(request.getParameter("mobileNo")));
 
 		populateBean(dto, request);
-		
+
 		log.debug("UserRegistrationCtl Method populatedto Ended");
 
 		return dto;
@@ -172,7 +167,6 @@ public class UserCtl extends BaseCtl {
 
 		String op = DataUtility.getString(request.getParameter("operation"));
 
-		
 		UserModelInt model = ModelFactory.getInstance().getUserModel();
 		long id = DataUtility.getLong(request.getParameter("id"));
 

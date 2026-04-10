@@ -27,8 +27,6 @@
 			<column name="ENDDATE" />
 		</property>
 
-		<!-- Common Fields ! -->
-
 		<property name="createdBy" type="java.lang.String"
 			length="50">
 			<column name="CREATED_BY" />

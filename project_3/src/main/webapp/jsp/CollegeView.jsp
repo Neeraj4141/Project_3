@@ -21,11 +21,11 @@ i.css {
 .p4 {
 	background-image: url('<%=ORSView.APP_CONTEXT%>/img/addPage.png');
 	background-repeat: no-repeat;
-	background-attachment: fixed; 
+	background-attachment: fixed;
 	background-size: cover;
 	padding-top: 75px;
-	
-	/* background-size: 100%; */ 
+
+	/* background-size: 100%; */
 }
 </style>
 </head>
@@ -39,7 +39,7 @@ i.css {
 		<form action="<%=ORSView.COLLEGE_CTL%>" method="post">
 
 			<div class="row pt-3 pb-4">
-				<!-- Grid column -->
+
 				<jsp:useBean id="dto" class="in.co.rays.project_3.dto.CollegeDTO"
 					scope="request"></jsp:useBean>
 				<div class="col-md-4 mb-4"></div>

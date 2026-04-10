@@ -13,7 +13,7 @@ public class ContractDTO extends BaseDTO {
 	private Date startDate;
 	private Date endDate;
 
-	
+	// setter getter
 	public String getContractCode() {
 		return contractCode;
 	}
@@ -48,11 +48,13 @@ public class ContractDTO extends BaseDTO {
 
 	@Override
 	public String getKey() {
+
 		return null;
 	}
 
 	@Override
 	public String getValue() {
+
 		return null;
 	}
 

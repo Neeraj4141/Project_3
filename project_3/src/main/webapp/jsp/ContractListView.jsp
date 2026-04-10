@@ -55,7 +55,7 @@
 			</h1>
 		</center>
 
-		<!-- Success -->
+
 		<div class="row">
 			<div class="col-md-4"></div>
 
@@ -76,7 +76,7 @@
 			<div class="col-md-4"></div>
 		</div>
 
-		<!-- Error -->
+
 		<div class="row">
 			<div class="col-md-4"></div>
 
@@ -96,7 +96,7 @@
 			<div class="col-md-4"></div>
 		</div>
 
-		<!-- 🔍 Search -->
+
 		<div class="row">
 
 			<div class="col-sm-2"></div>
@@ -168,7 +168,7 @@
 			</table>
 		</div>
 
-		<!-- BUTTONS -->
+		
 		<table width="100%">
 			<tr>
 
