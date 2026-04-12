@@ -72,6 +72,9 @@
 			resource="in/co/rays/project_3/hbm/SpaceMissionDTO.hbm.xml" />
 		<mapping
 			resource="in/co/rays/project_3/hbm/ContractDTO.hbm.xml" />
+		<mapping
+			resource="in/co/rays/project_3/hbm/StockMovementDTO.hbm.xml" />
+
 
 
 

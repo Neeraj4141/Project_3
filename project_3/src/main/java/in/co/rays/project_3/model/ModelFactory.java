@@ -381,4 +381,18 @@ public final class ModelFactory {
 
 		return contractModel;
 	}
+
+	public StockMovementModelInt getStockMovementModel() {
+
+		StockMovementModelInt stockMovementModel = (StockMovementModelInt) modelCache.get("stockMovementModel");
+
+		if (stockMovementModel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				stockMovementModel = new StockMovementModelHibImpl();
+			}
+		}
+
+		return stockMovementModel;
+	}
 }

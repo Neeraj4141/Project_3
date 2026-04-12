@@ -242,4 +242,12 @@ public interface ORSView {
 
 	public String SPACEMISSION_LIST_VIEW = PAGE_FOLDER + "/SpaceMissionListView.jsp";
 
+	public String STOCKMOVEMENT_CTL = APP_CONTEXT + "/ctl/StockMovementCtl";
+
+	public String STOCKMOVEMENT_LIST_CTL = APP_CONTEXT + "/ctl/StockMovementListCtl";
+
+	public String STOCKMOVEMENT_VIEW = PAGE_FOLDER + "/StockMovementView.jsp";
+
+	public String STOCKMOVEMENT_LIST_VIEW = PAGE_FOLDER + "/StockMovementListView.jsp";
+
 }
