@@ -208,7 +208,7 @@
 						</a>
 					</div></li>
 
-				<li class="nav-item dropdown" style="padding-left: 5px"><a
+				<%-- <li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> <font style="color: white;">Resturent
@@ -293,7 +293,7 @@
 							class="fa fa-sort-amount-down"></i>Add Wallet</a> <a
 							class="dropdown-item" href="<%=ORSView.WALLET_LIST_CTL%>"><i
 							class="fa fa-paste"></i>Wallet List</a>
-					</div></li>
+					</div></li> --%>
 
 				<%-- 	<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
@@ -423,6 +423,20 @@
 							class="fa fa-paste"></i>StockMovement List</a>
 					</div></li>
  --%>
+
+				<li class="nav-item dropdown" style="padding-left: 5px"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">Advertisement
+					</font></a>
+
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+						<a class="dropdown-item" href="<%=ORSView.ADVERTISEMENT_CTL%>"><i
+							class="fa fa-sort-amount-down"></i>Add Advertisement</a> <a
+							class="dropdown-item" href="<%=ORSView.ADVERTISEMENT_LIST_CTL%>"><i
+							class="fa fa-paste"></i>Advertisement List</a>
+					</div></li>
 
 				<%
 					}

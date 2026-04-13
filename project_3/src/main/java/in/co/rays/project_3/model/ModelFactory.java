@@ -395,4 +395,18 @@ public final class ModelFactory {
 
 		return stockMovementModel;
 	}
+
+	public AdvertisementModelInt getAdvertisementModel() {
+
+		AdvertisementModelInt advertisementModel = (AdvertisementModelInt) modelCache.get("advertisementModel");
+
+		if (advertisementModel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				advertisementModel = new AdvertisementModelHibImpl();
+			}
+		}
+
+		return advertisementModel;
+	}
 }

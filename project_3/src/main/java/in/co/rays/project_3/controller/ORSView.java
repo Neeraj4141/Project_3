@@ -248,6 +248,14 @@ public interface ORSView {
 
 	public String STOCKMOVEMENT_VIEW = PAGE_FOLDER + "/StockMovementView.jsp";
 
-	public String STOCKMOVEMENT_LIST_VIEW = PAGE_FOLDER + "/StockMovementListView.jsp";
+	public String STOCKMOVEMENT_LIST_VIEW = PAGE_FOLDER + "/AdvertisementListView.jsp";
+
+	public String ADVERTISEMENT_CTL = APP_CONTEXT + "/ctl/AdvertisementCtl";
+
+	public String ADVERTISEMENT_LIST_CTL = APP_CONTEXT + "/ctl/AdvertisementListCtl";
+
+	public String ADVERTISEMENT_VIEW = PAGE_FOLDER + "/AdvertisementView.jsp";
+
+	public String ADVERTISEMENT_LIST_VIEW = PAGE_FOLDER + "/AdvertisementListView.jsp";
 
 }

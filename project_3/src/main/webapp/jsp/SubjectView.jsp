@@ -20,7 +20,7 @@
 
 
 .hm {
-	background-image: url('<%=ORSView.APP_CONTEXT%>/img/user1.jpg');
+	background-image: url('<%=ORSView.APP_CONTEXT%>/img/addPage.png');
 	background-repeat: no-repeat;
 	background-attachment: fixed; 
 	background-size: cover;

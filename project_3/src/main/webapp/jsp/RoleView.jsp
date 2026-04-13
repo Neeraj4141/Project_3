@@ -22,20 +22,21 @@ i.css {
 	padding-bottom: 11px;
 	background-color: #ebebe0;
 }
-.input-group-addon{
-	box-shadow: 9px 8px 7px #001a33;
 
+.input-group-addon {
+	box-shadow: 9px 8px 7px #001a33;
 }
-.p4{
-background-image: url('<%=ORSView.APP_CONTEXT%>/img/user1.jpg');
-background-repeat: no-repeat;
-	background-attachment: fixed; 
+
+.p4 {
+	background-image:
+		url('<%=ORSView.APP_CONTEXT%>/img/userRegistration.png');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 	background-size: cover;
 	padding-top: 85px;
-	
+
 	/* background-size: 100%; */
 }
-
 </style>
 </head>
 <body class="p4">
@@ -57,7 +58,7 @@ background-repeat: no-repeat;
 							<%
 								long id = DataUtility.getLong(request.getParameter("id"));
 
-								if (dto.getId()!=null) {
+								if (dto.getId() != null) {
 							%>
 
 							<h3 class="text-center text-primary font-weight-bold">Update
@@ -110,7 +111,7 @@ background-repeat: no-repeat;
 								<input type="hidden" name="modifiedDatetime"
 									value="<%=DataUtility.getTimestamp(dto.getModifiedDatetime())%>">
 							</div>
-							<div class="md-form input-group-addon">
+							<div class="md-form ">
 								<span class="pl-sm-5"><b>Name</b><span
 									style="color: red;">*</span></span></br>
 								<div class="col-sm-12">
