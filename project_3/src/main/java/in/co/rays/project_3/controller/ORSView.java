@@ -257,5 +257,14 @@ public interface ORSView {
 	public String ADVERTISEMENT_VIEW = PAGE_FOLDER + "/AdvertisementView.jsp";
 
 	public String ADVERTISEMENT_LIST_VIEW = PAGE_FOLDER + "/AdvertisementListView.jsp";
+	
+	public String NOTIFICATION_CTL = APP_CONTEXT + "/ctl/NotificationCtl";
+
+	public String NOTIFICATION_LIST_CTL = APP_CONTEXT + "/ctl/NotificationListCtl";
+
+	public String NOTIFICATION_VIEW = PAGE_FOLDER + "/NotificationView.jsp";
+
+	public String NOTIFICATION_LIST_VIEW = PAGE_FOLDER + "/NotificationListView.jsp";
+
 
 }

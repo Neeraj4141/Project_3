@@ -409,4 +409,20 @@ public final class ModelFactory {
 
 		return advertisementModel;
 	}
+	
+	public NotificationModelInt getNotificationModel() {
+
+		NotificationModelInt notificationModel = (NotificationModelInt) modelCache.get("notificationModel");
+
+		if (notificationModel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				notificationModel = new NotificationModelHibImpl();
+			}
+		}
+
+		return notificationModel;
+	}
+	
+	
 }
