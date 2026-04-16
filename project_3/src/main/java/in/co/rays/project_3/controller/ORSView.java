@@ -257,7 +257,7 @@ public interface ORSView {
 	public String ADVERTISEMENT_VIEW = PAGE_FOLDER + "/AdvertisementView.jsp";
 
 	public String ADVERTISEMENT_LIST_VIEW = PAGE_FOLDER + "/AdvertisementListView.jsp";
-	
+
 	public String NOTIFICATION_CTL = APP_CONTEXT + "/ctl/NotificationCtl";
 
 	public String NOTIFICATION_LIST_CTL = APP_CONTEXT + "/ctl/NotificationListCtl";
@@ -266,5 +266,20 @@ public interface ORSView {
 
 	public String NOTIFICATION_LIST_VIEW = PAGE_FOLDER + "/NotificationListView.jsp";
 
+	public String CASE_CTL = APP_CONTEXT + "/ctl/CaseCtl";
+
+	public String CASE_LIST_CTL = APP_CONTEXT + "/ctl/CaseListCtl";
+
+	public String CASE_VIEW = PAGE_FOLDER + "/CaseView.jsp";
+
+	public String CASE_LIST_VIEW = PAGE_FOLDER + "/CaseListView.jsp";
+
+	public String ENVIRONMENT_CTL = APP_CONTEXT + "/ctl/EnvironmentCtl";
+
+	public String ENVIRONMENT_LIST_CTL = APP_CONTEXT + "/ctl/EnvironmentListCtl";
+
+	public String ENVIRONMENT_VIEW = PAGE_FOLDER + "/EnvironmentView.jsp";
+
+	public String ENVIRONMENT_LIST_VIEW = PAGE_FOLDER + "/EnvironmentListView.jsp";
 
 }

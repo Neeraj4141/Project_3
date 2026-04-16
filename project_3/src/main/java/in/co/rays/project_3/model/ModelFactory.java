@@ -409,7 +409,7 @@ public final class ModelFactory {
 
 		return advertisementModel;
 	}
-	
+
 	public NotificationModelInt getNotificationModel() {
 
 		NotificationModelInt notificationModel = (NotificationModelInt) modelCache.get("notificationModel");
@@ -423,6 +423,36 @@ public final class ModelFactory {
 
 		return notificationModel;
 	}
+
+	public CaseModelInt getCaseModel() {
+
+		CaseModelInt caseModel = (CaseModelInt) modelCache.get("caseModel");
+
+		if (caseModel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				caseModel = new CaseModelHibImpl();
+			}
+		}
+
+		return caseModel;
+	}
 	
-	
+	public EnvironmentModelInt getEnvironmentModel() {
+
+		EnvironmentModelInt environmentModel = 
+				(EnvironmentModelInt) modelCache.get("environmentModel");
+
+		if (environmentModel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				environmentModel = new EnvironmentModelHibImpl();
+			}
+
+			modelCache.put("environmentModel", environmentModel);
+		}
+
+		return environmentModel;
+	}
+
 }
