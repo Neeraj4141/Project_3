@@ -438,7 +438,6 @@ public class TimetableModelJDBCImpl implements TimetableModelInt {
 	/**
 	 * @param CourseId
 	 * @param SubjectId
-	 * @param ExamDAte
 	 * @return
 	 * @throws ApplicationException
 	 */

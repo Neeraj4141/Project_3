@@ -281,5 +281,14 @@ public interface ORSView {
 	public String ENVIRONMENT_VIEW = PAGE_FOLDER + "/EnvironmentView.jsp";
 
 	public String ENVIRONMENT_LIST_VIEW = PAGE_FOLDER + "/EnvironmentListView.jsp";
+	
+	public String DATARETENTION_CTL = APP_CONTEXT + "/ctl/DataRetentionCtl";
+
+	public String DATARETENTION_LIST_CTL = APP_CONTEXT + "/ctl/DataRetentionListCtl";
+
+	public String DATARETENTION_VIEW = PAGE_FOLDER + "/DataRetentionView.jsp";
+
+	public String DATARETENTION_LIST_VIEW = PAGE_FOLDER + "/DataRetentionListView.jsp";
+
 
 }

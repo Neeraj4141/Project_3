@@ -17,6 +17,7 @@ import in.co.rays.project_3.util.JDBCDataSource;
 
 /**
  * JDBC implements of Course model
+ * 
  * @author Neeraj Mewada
  *
  */
@@ -111,7 +112,7 @@ public class CourseModelJDBCImpl implements CourseModelInt {
 	/**
 	 * update course information
 	 * 
-	 * @param b
+	 * 
 	 * @throws ApplicationException
 	 */
 	public void update(CourseDTO dto) throws ApplicationException {

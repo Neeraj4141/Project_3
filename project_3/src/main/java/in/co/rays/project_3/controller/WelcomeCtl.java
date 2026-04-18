@@ -22,10 +22,7 @@ public class WelcomeCtl extends BaseCtl {
 
 	private static Logger log = Logger.getLogger(WelcomeCtl.class);
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 

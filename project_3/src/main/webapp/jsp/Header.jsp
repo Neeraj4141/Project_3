@@ -464,8 +464,8 @@
 							class="dropdown-item" href="<%=ORSView.CASE_LIST_CTL%>"><i
 							class="fa fa-paste"></i>Case List</a>
 					</div></li>
-					
-						<li class="nav-item dropdown" style="padding-left: 5px"><a
+
+				<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> <font style="color: white;">Environment
@@ -477,6 +477,20 @@
 							class="fa fa-sort-amount-down"></i>Add Environment</a> <a
 							class="dropdown-item" href="<%=ORSView.ENVIRONMENT_LIST_CTL%>"><i
 							class="fa fa-paste"></i>Environment List</a>
+					</div></li>
+
+				<li class="nav-item dropdown" style="padding-left: 5px"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">DataRetention
+					</font></a>
+
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+						<a class="dropdown-item" href="<%=ORSView.DATARETENTION_CTL%>"><i
+							class="fa fa-sort-amount-down"></i>Add DataRetention </a> <a
+							class="dropdown-item" href="<%=ORSView.DATARETENTION_LIST_CTL%>"><i
+							class="fa fa-paste"></i>DataRetention List</a>
 					</div></li>
 
 				<%

@@ -187,7 +187,7 @@ public class DataUtility {
 	/**
 	 * convert timestamp timestamp to long
 	 * 
-	 * @param Timestamp
+	 *
 	 * @return long
 	 */
 	public static long getTimestamp(Timestamp tm) {

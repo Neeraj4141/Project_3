@@ -17,15 +17,17 @@ import in.co.rays.project_3.util.JDBCDataSource;
 
 /**
  * JDBC implements of Role model
+ * 
  * @author Neeraj Mewada
  *
  */
-public class RoleModelJDBCImpl implements RoleModelInt{
+public class RoleModelJDBCImpl implements RoleModelInt {
 
 	private static Logger log = Logger.getLogger(RoleModelJDBCImpl.class);
 
 	/**
-	 * create id 
+	 * create id
+	 * 
 	 * @return pk
 	 * @throws DatabaseException
 	 */
@@ -51,13 +53,14 @@ public class RoleModelJDBCImpl implements RoleModelInt{
 	}
 
 	/**
-	 * add new role 
+	 * add new role
+	 * 
 	 * @param rdto
 	 * @return pk
 	 * @throws ApplicationException
 	 * @throws DuplicateRecordException
 	 */
-	public long add(RoleDTO rdto) throws  ApplicationException, DuplicateRecordException {
+	public long add(RoleDTO rdto) throws ApplicationException, DuplicateRecordException {
 		Connection con = null;
 		long pk = 0;
 		RoleDTO duplicataRole = findByName(rdto.getName());
@@ -65,7 +68,7 @@ public class RoleModelJDBCImpl implements RoleModelInt{
 			throw new DuplicateRecordException("Role already exists");
 		}
 		try {
-			pk=nextPK();
+			pk = nextPK();
 			con = JDBCDataSource.getConnection();
 			con.setAutoCommit(false);
 			PreparedStatement ps = con.prepareStatement("insert into st_role values(?,?,?,?,?,?,?)");
@@ -97,6 +100,7 @@ public class RoleModelJDBCImpl implements RoleModelInt{
 
 	/**
 	 * delete role
+	 * 
 	 * @param rdto
 	 * @throws ApplicationException
 	 */
@@ -128,7 +132,8 @@ public class RoleModelJDBCImpl implements RoleModelInt{
 	}
 
 	/**
-	 * update role 
+	 * update role
+	 * 
 	 * @param rdto
 	 * @throws ApplicationException
 	 * @throws DuplicateRecordException
@@ -176,9 +181,9 @@ public class RoleModelJDBCImpl implements RoleModelInt{
 		return list(0, 0);
 	}
 
-	
 	/**
-	 *list of role
+	 * list of role
+	 * 
 	 * @param pageNo
 	 * @param pageSize
 	 * @return list
@@ -196,13 +201,13 @@ public class RoleModelJDBCImpl implements RoleModelInt{
 		}
 
 		Connection conn = null;
-		RoleDTO dto=null;
+		RoleDTO dto = null;
 		try {
 			conn = JDBCDataSource.getConnection();
 			PreparedStatement pstmt = conn.prepareStatement(sql.toString());
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
-				 dto = new RoleDTO();
+				dto = new RoleDTO();
 				dto.setId(rs.getLong(1));
 				dto.setName(rs.getString(2));
 				dto.setDescription(rs.getString(3));
@@ -227,6 +232,7 @@ public class RoleModelJDBCImpl implements RoleModelInt{
 
 	/**
 	 * find by role with the help of role
+	 * 
 	 * @param pk
 	 * @return dto
 	 * @throws ApplicationException
@@ -264,6 +270,7 @@ public class RoleModelJDBCImpl implements RoleModelInt{
 
 	/**
 	 * find role with the help of name
+	 * 
 	 * @param name
 	 * @return dto
 	 * @throws ApplicationException
@@ -304,65 +311,60 @@ public class RoleModelJDBCImpl implements RoleModelInt{
 
 	/**
 	 * search role
-	 * @param rdto1
+	 * 
 	 * @param pageNo
 	 * @param pageSize
 	 * @return list
 	 * @throws ApplicationException
 	 */
-	public ArrayList<RoleDTO> search(RoleDTO dto, int pageNo, int pageSize) throws ApplicationException{
-	    //log.debug("Model search Started");
-	    StringBuffer sql = new StringBuffer("select * from st_role where 1=1");
+	public ArrayList<RoleDTO> search(RoleDTO dto, int pageNo, int pageSize) throws ApplicationException {
+		// log.debug("Model search Started");
+		StringBuffer sql = new StringBuffer("select * from st_role where 1=1");
 
-	    if (dto != null) {
-	        if (dto.getId() > 0) {
-	            sql.append(" AND ID = " + dto.getId());
-	        }
-	        if (dto.getName() != null && dto.getName().length() > 0) {
-	            sql.append(" AND NAME like '" + dto.getName() + "%'");
-	        }
-	       
-	    }
+		if (dto != null) {
+			if (dto.getId() > 0) {
+				sql.append(" AND ID = " + dto.getId());
+			}
+			if (dto.getName() != null && dto.getName().length() > 0) {
+				sql.append(" AND NAME like '" + dto.getName() + "%'");
+			}
 
-	    // if page size is greater than zero then apply pagination
-	    if (pageSize > 0) {
-	        // Calculate start record index
-	        pageNo = (pageNo - 1) * pageSize;
+		}
 
-	        sql.append(" Limit " + pageNo + ", " + pageSize);
-	        // sql.append(" limit " + pageNo + "," + pageSize);
-	    }
+		// if page size is greater than zero then apply pagination
+		if (pageSize > 0) {
+			// Calculate start record index
+			pageNo = (pageNo - 1) * pageSize;
 
-	    System.out.println(sql);
-	    ArrayList<RoleDTO> list = new ArrayList<RoleDTO>();
-	    Connection conn = null;
-	    try {
-	        conn = JDBCDataSource.getConnection();
-	        PreparedStatement pstmt = conn.prepareStatement(sql.toString());
-	        ResultSet rs = pstmt.executeQuery();
-	        while (rs.next()) 
-	        {
-	        	
-	            dto = new RoleDTO();
-	            dto.setId(rs.getLong(1));
-	            dto.setName(rs.getString(2));
-	            dto.setDescription(rs.getString(3));
-         
+			sql.append(" Limit " + pageNo + ", " + pageSize);
+			// sql.append(" limit " + pageNo + "," + pageSize);
+		}
 
-	            list.add(dto);
-	        }
-	        rs.close();
-	    } catch (Exception e) {
-	    	throw new ApplicationException("exception in role model  search"+e.getMessage());
-	    } finally {
-	        JDBCDataSource.closeConnection(conn);
-	    }
+		System.out.println(sql);
+		ArrayList<RoleDTO> list = new ArrayList<RoleDTO>();
+		Connection conn = null;
+		try {
+			conn = JDBCDataSource.getConnection();
+			PreparedStatement pstmt = conn.prepareStatement(sql.toString());
+			ResultSet rs = pstmt.executeQuery();
+			while (rs.next()) {
 
-	    //log.debug("Model search End");
-	    return list;
+				dto = new RoleDTO();
+				dto.setId(rs.getLong(1));
+				dto.setName(rs.getString(2));
+				dto.setDescription(rs.getString(3));
+
+				list.add(dto);
+			}
+			rs.close();
+		} catch (Exception e) {
+			throw new ApplicationException("exception in role model  search" + e.getMessage());
+		} finally {
+			JDBCDataSource.closeConnection(conn);
+		}
+
+		// log.debug("Model search End");
+		return list;
 	}
 
-	
-	
-	
 }

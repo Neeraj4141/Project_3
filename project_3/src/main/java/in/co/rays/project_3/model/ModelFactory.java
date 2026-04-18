@@ -437,11 +437,10 @@ public final class ModelFactory {
 
 		return caseModel;
 	}
-	
+
 	public EnvironmentModelInt getEnvironmentModel() {
 
-		EnvironmentModelInt environmentModel = 
-				(EnvironmentModelInt) modelCache.get("environmentModel");
+		EnvironmentModelInt environmentModel = (EnvironmentModelInt) modelCache.get("environmentModel");
 
 		if (environmentModel == null) {
 
@@ -453,6 +452,22 @@ public final class ModelFactory {
 		}
 
 		return environmentModel;
+	}
+
+	public DataRetentionModelInt getDataRetentionModel() {
+
+		DataRetentionModelInt dataRetentionModel = (DataRetentionModelInt) modelCache.get("dataRetentionModel");
+
+		if (dataRetentionModel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				dataRetentionModel = new DataRetentionModelHibImpl();
+			}
+
+			modelCache.put("dataRetentionModel", dataRetentionModel);
+		}
+
+		return dataRetentionModel;
 	}
 
 }
