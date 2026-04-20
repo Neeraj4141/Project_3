@@ -10,7 +10,6 @@
 			<generator class="increment"></generator>
 		</id>
 		
-		
 		<property name="firstName" type="java.lang.String">
 			<column name="FIRST_NAME" />
 		</property>
@@ -26,7 +25,6 @@
 		<property name="dob" type="java.util.Date">
 			<column name="DOB" />
 		</property>
-
 		<property name="mobileNo" type="java.lang.String">
 			<column name="MOBILE_NO" />
 		</property>

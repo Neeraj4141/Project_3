@@ -323,7 +323,7 @@
 							class="fa fa-paste"></i>BankAccount List</a>
 					</div></li> --%>
 
-				<li class="nav-item dropdown" style="padding-left: 5px"><a
+				<%-- 	<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> <font style="color: white;">Policy
@@ -335,7 +335,7 @@
 							class="fa fa-sort-amount-down"></i>Add Policy</a> <a
 							class="dropdown-item" href="<%=ORSView.POLICY_LIST_CTL%>"><i
 							class="fa fa-paste"></i>Policy List</a>
-					</div></li>
+					</div></li> --%>
 
 
 
@@ -353,7 +353,7 @@
 							class="fa fa-paste"></i>Prescription List</a>
 					</div></li> --%>
 
-
+				<%-- 
 				<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -366,7 +366,7 @@
 							class="fa fa-sort-amount-down"></i>Add Report</a> <a
 							class="dropdown-item" href="<%=ORSView.REPORT_LIST_CTL%>"><i
 							class="fa fa-paste"></i>Report List</a>
-					</div></li>
+					</div></li> --%>
 
 				<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
@@ -491,6 +491,20 @@
 							class="fa fa-sort-amount-down"></i>Add DataRetention </a> <a
 							class="dropdown-item" href="<%=ORSView.DATARETENTION_LIST_CTL%>"><i
 							class="fa fa-paste"></i>DataRetention List</a>
+					</div></li>
+
+				<li class="nav-item dropdown" style="padding-left: 5px"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">WebHookLog
+					</font></a>
+
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+						<a class="dropdown-item" href="<%=ORSView.WEBHOOK_CTL%>"><i
+							class="fa fa-sort-amount-down"></i>Add WebHookLog </a> <a
+							class="dropdown-item" href="<%=ORSView.WEBHOOK_LIST_CTL%>"><i
+							class="fa fa-paste"></i>WebHookLog List</a>
 					</div></li>
 
 				<%

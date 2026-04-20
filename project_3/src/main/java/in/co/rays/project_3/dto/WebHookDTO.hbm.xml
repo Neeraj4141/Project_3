@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 20-Apr-2026, 11:38:38 am by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <subclass name="in.co.rays.project_3.dto.WebHookDTO" extends="in.co.rays.project_3.dto.BaseDTO" discriminator-value="WebHookDTO" lazy="false">
+        <property name="logCode" type="java.lang.String">
+            <column name="LOGCODE" />
+        </property>
+        <property name="webhookId" type="java.lang.Long">
+            <column name="WEBHOOKID" />
+        </property>
+        <property name="response" type="java.lang.String">
+            <column name="RESPONSE" />
+        </property>
+        <property name="status" type="java.lang.String" access="field">
+            <column name="STATUS" />
+        </property>
+    </subclass>
+</hibernate-mapping>

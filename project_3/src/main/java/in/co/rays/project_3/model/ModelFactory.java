@@ -470,4 +470,20 @@ public final class ModelFactory {
 		return dataRetentionModel;
 	}
 
+	public WebHookModelInt getWebHookModel() {
+
+		WebHookModelInt webHookModel = (WebHookModelInt) modelCache.get("webHookModel");
+
+		if (webHookModel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				webHookModel = new WebHookModelHibImpl();
+			}
+
+			modelCache.put("webHookModel", webHookModel);
+		}
+
+		return webHookModel;
+	}
+
 }

@@ -83,7 +83,8 @@
 			resource="in/co/rays/project_3/hbm/EnvironmentDTO.hbm.xml" />
 		<mapping
 			resource="in/co/rays/project_3/hbm/DataRetentionDTO.hbm.xml" />
-
+		<mapping
+			resource="in/co/rays/project_3/hbm/WebHookDTO.hbm.xml" />
 
 
 

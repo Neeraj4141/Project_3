@@ -281,7 +281,7 @@ public interface ORSView {
 	public String ENVIRONMENT_VIEW = PAGE_FOLDER + "/EnvironmentView.jsp";
 
 	public String ENVIRONMENT_LIST_VIEW = PAGE_FOLDER + "/EnvironmentListView.jsp";
-	
+
 	public String DATARETENTION_CTL = APP_CONTEXT + "/ctl/DataRetentionCtl";
 
 	public String DATARETENTION_LIST_CTL = APP_CONTEXT + "/ctl/DataRetentionListCtl";
@@ -290,5 +290,12 @@ public interface ORSView {
 
 	public String DATARETENTION_LIST_VIEW = PAGE_FOLDER + "/DataRetentionListView.jsp";
 
+	public String WEBHOOK_CTL = APP_CONTEXT + "/ctl/WebHookCtl";
+
+	public String WEBHOOK_LIST_CTL = APP_CONTEXT + "/ctl/WebHookListCtl";
+
+	public String WEBHOOK_VIEW = PAGE_FOLDER + "/WebHookView.jsp";
+
+	public String WEBHOOK_LIST_VIEW = PAGE_FOLDER + "/WebHookListView.jsp";
 
 }
