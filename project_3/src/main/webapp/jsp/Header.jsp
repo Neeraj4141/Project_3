@@ -437,7 +437,7 @@
 							class="dropdown-item" href="<%=ORSView.ADVERTISEMENT_LIST_CTL%>"><i
 							class="fa fa-paste"></i>Advertisement List</a>
 					</div></li>
-				<li class="nav-item dropdown" style="padding-left: 5px"><a
+				<%-- 	<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> <font style="color: white;">Notification
@@ -449,7 +449,7 @@
 							class="fa fa-sort-amount-down"></i>Add Notification</a> <a
 							class="dropdown-item" href="<%=ORSView.NOTIFICATION_LIST_CTL%>"><i
 							class="fa fa-paste"></i>Notification List</a>
-					</div></li>
+					</div></li> --%>
 
 				<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
@@ -505,6 +505,21 @@
 							class="fa fa-sort-amount-down"></i>Add WebHookLog </a> <a
 							class="dropdown-item" href="<%=ORSView.WEBHOOK_LIST_CTL%>"><i
 							class="fa fa-paste"></i>WebHookLog List</a>
+					</div></li>
+
+
+				<li class="nav-item dropdown" style="padding-left: 5px"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">NotificationRule
+					</font></a>
+
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+						<a class="dropdown-item" href="<%=ORSView.RULE_CTL%>"><i
+							class="fa fa-sort-amount-down"></i>Add NotificationRule</a> <a
+							class="dropdown-item" href="<%=ORSView.RULE_LIST_CTL%>"><i
+							class="fa fa-paste"></i>NotificationRule List</a>
 					</div></li>
 
 				<%

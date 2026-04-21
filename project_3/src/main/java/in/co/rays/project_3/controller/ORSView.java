@@ -258,14 +258,6 @@ public interface ORSView {
 
 	public String ADVERTISEMENT_LIST_VIEW = PAGE_FOLDER + "/AdvertisementListView.jsp";
 
-	public String NOTIFICATION_CTL = APP_CONTEXT + "/ctl/NotificationCtl";
-
-	public String NOTIFICATION_LIST_CTL = APP_CONTEXT + "/ctl/NotificationListCtl";
-
-	public String NOTIFICATION_VIEW = PAGE_FOLDER + "/NotificationView.jsp";
-
-	public String NOTIFICATION_LIST_VIEW = PAGE_FOLDER + "/NotificationListView.jsp";
-
 	public String CASE_CTL = APP_CONTEXT + "/ctl/CaseCtl";
 
 	public String CASE_LIST_CTL = APP_CONTEXT + "/ctl/CaseListCtl";
@@ -298,4 +290,19 @@ public interface ORSView {
 
 	public String WEBHOOK_LIST_VIEW = PAGE_FOLDER + "/WebHookListView.jsp";
 
+	public String NOTIFICATION_CTL = APP_CONTEXT + "/ctl/NotificationCtl";
+
+	public String NOTIFICATION_LIST_CTL = APP_CONTEXT + "/ctl/NotificationListCtl";
+
+	public String NOTIFICATION_VIEW = PAGE_FOLDER + "/NotificationView.jsp";
+
+	public String NOTIFICATION_LIST_VIEW = PAGE_FOLDER + "/NotificationListView.jsp";
+
+	public String RULE_CTL = APP_CONTEXT + "/ctl/RuleCtl";
+
+	public String RULE_LIST_CTL = APP_CONTEXT + "/ctl/RuleListCtl";
+
+	public String RULE_VIEW = PAGE_FOLDER + "/RuleView.jsp";
+
+	public String RULE_LIST_VIEW = PAGE_FOLDER + "/RuleListView.jsp";
 }

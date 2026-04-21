@@ -76,8 +76,6 @@
 			resource="in/co/rays/project_3/hbm/StockMovementDTO.hbm.xml" />
 		<mapping
 			resource="in/co/rays/project_3/hbm/AdvertisementDTO.hbm.xml" />
-		<mapping
-			resource="in/co/rays/project_3/hbm/NotificationDTO.hbm.xml" />
 		<mapping resource="in/co/rays/project_3/hbm/CaseDTO.hbm.xml" />
 		<mapping
 			resource="in/co/rays/project_3/hbm/EnvironmentDTO.hbm.xml" />
@@ -85,8 +83,9 @@
 			resource="in/co/rays/project_3/hbm/DataRetentionDTO.hbm.xml" />
 		<mapping
 			resource="in/co/rays/project_3/hbm/WebHookDTO.hbm.xml" />
-
-
+		<mapping
+			resource="in/co/rays/project_3/hbm/NotificationDTO.hbm.xml" />
+		<mapping resource="in/co/rays/project_3/hbm/RuleDTO.hbm.xml" />
 
 
 

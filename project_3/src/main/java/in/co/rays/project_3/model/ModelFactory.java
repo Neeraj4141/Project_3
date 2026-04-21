@@ -410,20 +410,6 @@ public final class ModelFactory {
 		return advertisementModel;
 	}
 
-	public NotificationModelInt getNotificationModel() {
-
-		NotificationModelInt notificationModel = (NotificationModelInt) modelCache.get("notificationModel");
-
-		if (notificationModel == null) {
-
-			if ("Hibernate".equals(DATABASE)) {
-				notificationModel = new NotificationModelHibImpl();
-			}
-		}
-
-		return notificationModel;
-	}
-
 	public CaseModelInt getCaseModel() {
 
 		CaseModelInt caseModel = (CaseModelInt) modelCache.get("caseModel");
@@ -486,4 +472,31 @@ public final class ModelFactory {
 		return webHookModel;
 	}
 
+	public NotificationModelInt getNotificationModel() {
+
+		NotificationModelInt notificationModel = (NotificationModelInt) modelCache.get("notificationModel");
+
+		if (notificationModel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				notificationModel = new NotificationModelHibImpl();
+			}
+		}
+
+		return notificationModel;
+	}
+	
+	public RuleModelInt getRuleModel() {
+
+		RuleModelInt ruleModel = (RuleModelInt) modelCache.get("ruleModel");
+
+		if (ruleModel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				ruleModel = new RuleModelHibImpl();
+			}
+		}
+
+		return ruleModel;
+	}
 }

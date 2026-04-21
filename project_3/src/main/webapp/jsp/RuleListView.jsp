@@ -1,7 +1,7 @@
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.List"%>
-<%@page import="in.co.rays.project_3.dto.NotificationDTO"%>
-<%@page import="in.co.rays.project_3.controller.NotificationListCtl"%>
+<%@page import="in.co.rays.project_3.dto.RuleDTO"%>
+<%@page import="in.co.rays.project_3.controller.RuleListCtl"%>
 <%@page import="in.co.rays.project_3.util.DataUtility"%>
 <%@page import="in.co.rays.project_3.util.ServletUtility"%>
 <%@page import="in.co.rays.project_3.controller.ORSView"%>
@@ -9,8 +9,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Notification List</title>
-
+<title>Rule List</title>
 <script src="<%=ORSView.APP_CONTEXT%>/js/jquery.min.js"></script>
 <script type="text/javascript"
 	src="<%=ORSView.APP_CONTEXT%>/js/CheckBox11.js"></script>
@@ -31,14 +30,12 @@
 </head>
 
 <%@include file="Header.jsp"%>
-<!-- Notification List View  -->
 
 <body class="hm">
 
-	<form class="pb-5" action="<%=ORSView.NOTIFICATION_LIST_CTL%>"
-		method="post">
+	<form class="pb-5" action="<%=ORSView.RULE_LIST_CTL%>" method="post">
 
-		<jsp:useBean id="dto" class="in.co.rays.project_3.dto.NotificationDTO"
+		<jsp:useBean id="dto" class="in.co.rays.project_3.dto.RuleDTO"
 			scope="request" />
 
 		<%
@@ -48,16 +45,15 @@
 			int nextPageSize = DataUtility.getInt(request.getAttribute("nextListSize").toString());
 
 			List list = ServletUtility.getList(request);
-			Iterator<NotificationDTO> it = list.iterator();
+			Iterator<RuleDTO> it = list.iterator();
 		%>
 
 		<center>
 			<h1 class="text-dark font-weight-bold pt-3">
-				<u>Notification List</u>
+				<u>Rule List</u>
 			</h1>
 		</center>
 
-		<!-- SUCCESS MESSAGE -->
 		<div class="row">
 			<div class="col-md-4"></div>
 
@@ -78,7 +74,6 @@
 			<div class="col-md-4"></div>
 		</div>
 
-		<!-- ERROR MESSAGE -->
 		<div class="row">
 			<div class="col-md-4"></div>
 
@@ -98,28 +93,21 @@
 			<div class="col-md-4"></div>
 		</div>
 
-		<!-- SEARCH -->
 		<div class="row">
 
 			<div class="col-sm-2"></div>
 
 			<div class="col-sm-3">
-				<input type="text" name="historyCode"
-					placeholder="Enter History Code" class="form-control"
-					value="<%=ServletUtility.getParameter("historyCode", request)%>">
-			</div>
-
-			<div class="col-sm-3">
-				<input type="text" name="userName" placeholder="Enter User Name"
+				<input type="text" name="ruleCode" placeholder="Enter Rule Code"
 					class="form-control"
-					value="<%=ServletUtility.getParameter("userName", request)%>">
+					value="<%=ServletUtility.getParameter("ruleCode", request)%>">
 			</div>
 
 			<div class="col-sm-3">
 				<input type="submit" class="btn btn-primary" name="operation"
-					value="<%=NotificationListCtl.OP_SEARCH%>"> <input
-					type="submit" class="btn btn-dark" name="operation"
-					value="<%=NotificationListCtl.OP_RESET%>">
+					value="<%=RuleListCtl.OP_SEARCH%>"> <input type="submit"
+					class="btn btn-dark" name="operation"
+					value="<%=RuleListCtl.OP_RESET%>">
 			</div>
 
 		</div>
@@ -136,9 +124,9 @@
 						<th width="10%"><input type="checkbox" id="select_all"
 							name="Select" class="text"> Select All</th>
 						<th class="text">S.NO</th>
-						<th class="text">History Code</th>
-						<th class="text">User Name</th>
-						<th class="text">Message</th>
+						<th class="text">Rule Code</th>
+						<th class="text">Trigger Type</th>
+						<th class="text">Event</th>
 						<th class="text">Status</th>
 						<th class="text">Edit</th>
 
@@ -158,13 +146,13 @@
 							name="ids" value="<%=dto.getId()%>"></td>
 
 						<td class="text"><%=index++%></td>
-						<td class="text"><%=dto.getHistoryCode()%></td>
-						<td class="text"><%=dto.getUserName()%></td>
-						<td class="text"><%=dto.getMessage()%></td>
+						<td class="text"><%=dto.getRuleCode()%></td>
+						<td class="text"><%=dto.getTriggerType()%></td>
+						<td class="text"><%=dto.getEvent()%></td>
 						<td class="text"><%=dto.getStatus()%></td>
 
-						<td class="text"><a
-							href="NotificationCtl?id=<%=dto.getId()%>">Edit</a></td>
+						<td class="text"><a href="RuleCtl?id=<%=dto.getId()%>">Edit</a>
+						</td>
 
 					</tr>
 
@@ -176,25 +164,22 @@
 			</table>
 		</div>
 
-		<!-- PAGINATION -->
 		<table width="100%">
 			<tr>
 
 				<td><input type="submit" name="operation"
-					class="btn btn-warning"
-					value="<%=NotificationListCtl.OP_PREVIOUS%>"
+					class="btn btn-warning" value="<%=RuleListCtl.OP_PREVIOUS%>"
 					<%=pageNo > 1 ? "" : "disabled"%>></td>
 
 				<td><input type="submit" name="operation"
-					class="btn btn-primary" value="<%=NotificationListCtl.OP_NEW%>">
-				</td>
+					class="btn btn-primary" value="<%=RuleListCtl.OP_NEW%>"></td>
 
 				<td><input type="submit" name="operation"
-					class="btn btn-danger" value="<%=NotificationListCtl.OP_DELETE%>">
+					class="btn btn-danger" value="<%=RuleListCtl.OP_DELETE%>">
 				</td>
 
 				<td align="right"><input type="submit" name="operation"
-					class="btn btn-warning" value="<%=NotificationListCtl.OP_NEXT%>"
+					class="btn btn-warning" value="<%=RuleListCtl.OP_NEXT%>"
 					<%=(nextPageSize != 0) ? "" : "disabled"%>></td>
 
 			</tr>

@@ -2,34 +2,32 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
-<!-- Notification HBM -->
-
 <hibernate-mapping package="in.co.rays.project_3.dto">
 
-	<class name="NotificationDTO" table="ST_NOTIFICATION">
+	<class name="RuleDTO" table="ST_RULE">
 
 		<id name="id" type="java.lang.Long">
 			<column name="ID"></column>
 			<generator class="increment"></generator>
 		</id>
 
-		<property name="historyCode" type="java.lang.String">
-			<column name="HISTORYCODE" />
+		<property name="ruleCode" type="java.lang.String">
+			<column name="RULECODE" />
 		</property>
 
-		<property name="userName" type="java.lang.String">
-			<column name="USERNAME" />
+		<property name="triggerType" type="java.lang.String">
+			<column name="TRIGGERTYPE" />
 		</property>
 
-		<property name="message" type="java.lang.String">
-			<column name="MESSAGE" />
+		<property name="event" type="java.lang.String">
+			<column name="EVENT" />
 		</property>
 
 		<property name="status" type="java.lang.String">
 			<column name="STATUS" />
 		</property>
 
-		<!-- Audit Fields -->
+		<!-- BaseDTO ke common fields -->
 		<property name="createdBy" type="java.lang.String" length="50">
 			<column name="CREATED_BY" />
 		</property>

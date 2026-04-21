@@ -11,31 +11,31 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.log4j.Logger;
 
 import in.co.rays.project_3.dto.BaseDTO;
-import in.co.rays.project_3.dto.NotificationDTO;
+import in.co.rays.project_3.dto.RuleDTO;
 import in.co.rays.project_3.exception.ApplicationException;
 import in.co.rays.project_3.model.ModelFactory;
-import in.co.rays.project_3.model.NotificationModelInt;
+import in.co.rays.project_3.model.RuleModelInt;
 import in.co.rays.project_3.util.DataUtility;
 import in.co.rays.project_3.util.PropertyReader;
 import in.co.rays.project_3.util.ServletUtility;
 
 /**
- * @author Neeraj Mewada
+ * Rule List Controller
+ * 
+ * @author Neeraj
  *
  */
-@WebServlet(name = "NotificationListCtl", urlPatterns = { "/ctl/NotificationListCtl" })
-public class NotificationListCtl extends BaseCtl {
+@WebServlet(name = "RuleListCtl", urlPatterns = { "/ctl/RuleListCtl" })
+public class RuleListCtl extends BaseCtl {
 
-	private static Logger log = Logger.getLogger(NotificationListCtl.class);
+	private static Logger log = Logger.getLogger(RuleListCtl.class);
 
 	@Override
 	protected BaseDTO populateDTO(HttpServletRequest request) {
 
-		NotificationDTO dto = new NotificationDTO();
+		RuleDTO dto = new RuleDTO();
 
-		dto.setHistoryCode(DataUtility.getString(request.getParameter("historyCode")));
-		dto.setUserName(DataUtility.getString(request.getParameter("userName")));
-		dto.setStatus(DataUtility.getString(request.getParameter("status")));
+		dto.setRuleCode(DataUtility.getString(request.getParameter("ruleCode")));
 
 		populateBean(dto, request);
 
@@ -48,7 +48,7 @@ public class NotificationListCtl extends BaseCtl {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		log.debug("NotificationListCtl doGet Method Start");
+		log.debug("RuleListCtl doGet Method Start");
 
 		List list;
 		List next;
@@ -56,8 +56,8 @@ public class NotificationListCtl extends BaseCtl {
 		int pageNo = 1;
 		int pageSize = DataUtility.getInt(PropertyReader.getValue("page.size"));
 
-		NotificationDTO dto = (NotificationDTO) populateDTO(request);
-		NotificationModelInt model = ModelFactory.getInstance().getNotificationModel();
+		RuleDTO dto = (RuleDTO) populateDTO(request);
+		RuleModelInt model = ModelFactory.getInstance().getRuleModel();
 
 		try {
 
@@ -94,7 +94,7 @@ public class NotificationListCtl extends BaseCtl {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		log.debug("NotificationListCtl doPost method Start ");
+		log.debug("RuleListCtl doPost method Start ");
 
 		List list = null;
 		List next = null;
@@ -105,12 +105,12 @@ public class NotificationListCtl extends BaseCtl {
 		pageNo = (pageNo == 0) ? 1 : pageNo;
 		pageSize = (pageSize == 0) ? DataUtility.getInt(PropertyReader.getValue("page.size")) : pageSize;
 
-		NotificationDTO dto = (NotificationDTO) populateDTO(request);
+		RuleDTO dto = (RuleDTO) populateDTO(request);
 		String op = DataUtility.getString(request.getParameter("operation"));
 
 		String[] ids = request.getParameterValues("ids");
 
-		NotificationModelInt model = ModelFactory.getInstance().getNotificationModel();
+		RuleModelInt model = ModelFactory.getInstance().getRuleModel();
 
 		try {
 
@@ -126,12 +126,12 @@ public class NotificationListCtl extends BaseCtl {
 
 			} else if (OP_NEW.equalsIgnoreCase(op)) {
 
-				ServletUtility.redirect(ORSView.NOTIFICATION_CTL, request, response);
+				ServletUtility.redirect(ORSView.RULE_CTL, request, response);
 				return;
 
 			} else if (OP_RESET.equalsIgnoreCase(op)) {
 
-				ServletUtility.redirect(ORSView.NOTIFICATION_LIST_CTL, request, response);
+				ServletUtility.redirect(ORSView.RULE_LIST_CTL, request, response);
 				return;
 
 			} else if (OP_DELETE.equalsIgnoreCase(op)) {
@@ -140,7 +140,7 @@ public class NotificationListCtl extends BaseCtl {
 
 				if (ids != null && ids.length > 0) {
 
-					NotificationDTO deleteDto = new NotificationDTO();
+					RuleDTO deleteDto = new RuleDTO();
 
 					for (String id : ids) {
 						deleteDto.setId(DataUtility.getLong(id));
@@ -155,7 +155,7 @@ public class NotificationListCtl extends BaseCtl {
 			}
 
 			if (OP_BACK.equalsIgnoreCase(op)) {
-				ServletUtility.redirect(ORSView.NOTIFICATION_LIST_CTL, request, response);
+				ServletUtility.redirect(ORSView.RULE_LIST_CTL, request, response);
 				return;
 			}
 
@@ -188,11 +188,8 @@ public class NotificationListCtl extends BaseCtl {
 		}
 	}
 
-	/**
-	 *
-	 */
 	@Override
 	protected String getView() {
-		return ORSView.NOTIFICATION_LIST_VIEW;
+		return ORSView.RULE_LIST_VIEW;
 	}
 }

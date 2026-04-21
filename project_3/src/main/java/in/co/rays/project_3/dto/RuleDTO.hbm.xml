@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-Apr-2026, 10:59:32 am by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <subclass name="in.co.rays.project_3.dto.RuleDTO" extends="in.co.rays.project_3.dto.BaseDTO" discriminator-value="RuleDTO" lazy="false">
+        <property name="ruleCode" type="java.lang.String">
+            <column name="RULECODE" />
+        </property>
+        <property name="triggerType" type="java.lang.String">
+            <column name="TRIGGERTYPE" />
+        </property>
+        <property name="event" type="java.lang.String">
+            <column name="EVENT" />
+        </property>
+        <property name="status" type="java.lang.String">
+            <column name="STATUS" />
+        </property>
+    </subclass>
+</hibernate-mapping>

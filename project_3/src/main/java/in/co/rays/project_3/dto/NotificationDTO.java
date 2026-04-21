@@ -1,5 +1,9 @@
 package in.co.rays.project_3.dto;
 
+/**
+ * @author Neeraj Mewada
+ *
+ */
 public class NotificationDTO extends BaseDTO {
 
 	private String historyCode;
