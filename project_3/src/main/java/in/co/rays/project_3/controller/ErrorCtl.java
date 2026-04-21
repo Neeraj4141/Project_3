@@ -40,24 +40,22 @@ public class ErrorCtl extends BaseCtl {
 		String lastCtl = (String) request.getAttribute("javax.servlet.error.request_uri");
 		String view = getViewFromCtl(lastCtl);
 
-
 		ServletUtility.setErrorMessage("Database server down!!!", request);
 		if (lastCtl != null && lastCtl.contains("ListCtl")) {
 
-		    if (ServletUtility.getList(request) == null) {
-		    	ServletUtility.setList(new java.util.ArrayList(), request);
-		    }
+			if (ServletUtility.getList(request) == null) {
+				ServletUtility.setList(new java.util.ArrayList(), request);
+			}
 
-		    request.setAttribute("pageNo", 1);
-		    request.setAttribute("pageSize", 10);
-		    request.setAttribute("nextListSize", 0);
+			request.setAttribute("pageNo", 1);
+			request.setAttribute("pageSize", 10);
+			request.setAttribute("nextListSize", 0);
 		}
-
 
 		ServletUtility.forward(view, request, response);
 
 	}
-	
+
 	private String getViewFromCtl(String ctl) {
 
 		if (ctl == null)
@@ -115,6 +113,9 @@ public class ErrorCtl extends BaseCtl {
 		if (ctl.endsWith(ORSView.USER_REGISTRATION_CTL))
 			return ORSView.USER_REGISTRATION_VIEW;
 
+		if (ctl.endsWith(ORSView.RULE_CTL))
+			return ORSView.RULE_VIEW;
+
 		// ===== LIST PAGES =====
 		if (ctl.endsWith(ORSView.USER_LIST_CTL))
 			return ORSView.USER_LIST_VIEW;
@@ -149,11 +150,11 @@ public class ErrorCtl extends BaseCtl {
 		if (ctl.endsWith(ORSView.MARKSHEET_MERIT_LIST_CTL))
 			return ORSView.MARKSHEET_MERIT_LIST_VIEW;
 
+		if (ctl.endsWith(ORSView.RULE_LIST_CTL))
+			return ORSView.RULE_LIST_VIEW;
+
 		return ORSView.ERROR_VIEW;
 	}
-
-
-
 
 	@Override
 	protected String getView() {

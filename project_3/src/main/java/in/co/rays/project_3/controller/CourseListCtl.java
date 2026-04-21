@@ -39,7 +39,7 @@ public class CourseListCtl extends BaseCtl {
 
 			request.setAttribute("courseList", list);
 
-		} catch (Exception e) {
+		} catch (ApplicationException e) {
 			log.error(e);
 		}
 	}

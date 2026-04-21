@@ -159,10 +159,11 @@ public class CourseModelHibImp implements CourseModelInt {
 		} catch (JDBCConnectionException e) {
 			throw e;
 		} catch (HibernateException e) {
-
 			throw new ApplicationException("Exception : Exception in  course list");
 		} finally {
-			session.close();
+			if (session != null) {
+				session.close();				
+			}
 		}
 		return list;
 	}
