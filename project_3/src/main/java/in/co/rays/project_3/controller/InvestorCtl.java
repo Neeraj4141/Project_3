@@ -20,6 +20,10 @@ import in.co.rays.project_3.util.DataValidator;
 import in.co.rays.project_3.util.PropertyReader;
 import in.co.rays.project_3.util.ServletUtility;
 
+/**
+ * @author NeerajMewada
+ *
+ */
 @WebServlet(urlPatterns = { "/ctl/InvestorCtl" })
 public class InvestorCtl extends BaseCtl {
 

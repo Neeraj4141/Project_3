@@ -22,6 +22,9 @@ public final class ModelFactory {
 
 	}
 
+	/**
+	 * @return
+	 */
 	public static ModelFactory getInstance() {
 		if (mFactory == null) {
 			mFactory = new ModelFactory();
@@ -29,6 +32,9 @@ public final class ModelFactory {
 		return mFactory;
 	}
 
+	/**
+	 * @return
+	 */
 	public HostelModelInt getHostelModel() {
 
 		HostelModelInt hostelModel = (HostelModelInt) modelCache.get("hostelModel");

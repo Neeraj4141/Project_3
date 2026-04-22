@@ -13,6 +13,10 @@ import in.co.rays.project_3.exception.ApplicationException;
 import in.co.rays.project_3.exception.DuplicateRecordException;
 import in.co.rays.project_3.util.HibDataSource;
 
+/**
+ * @author NeerajMewada
+ *
+ */
 public class InvestorModelHibImpl implements InvestorModelInt {
 
     // ================== ADD ==================

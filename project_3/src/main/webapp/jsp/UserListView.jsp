@@ -131,7 +131,6 @@
 				</div>
 				<div class="col-sm-1"></div>
 			</div>
-
 			</br>
 			<div style="margin-bottom: 20px;" class="table-responsive">
 				<table class="table table-bordered table-striped table-hover">

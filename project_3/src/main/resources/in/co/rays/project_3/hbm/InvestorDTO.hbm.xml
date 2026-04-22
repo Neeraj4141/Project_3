@@ -21,6 +21,7 @@
 		<property name="investmentType" type="java.lang.String">
 			<column name="INVESTMENTTYPE" />
 		</property>
+		<!-- From BaseDTO -->
 		<property name="createdBy" type="java.lang.String"
 			length="50">
 			<column name="CREATED_BY" />

@@ -4,27 +4,18 @@
 <%@page import="in.co.rays.project_3.util.ServletUtility"%>
 <%@page import="in.co.rays.project_3.controller.InvestorListCtl"%>
 <%@page import="in.co.rays.project_3.dto.InvestorDTO"%>
-<%@page import="in.co.rays.project_3.util.HTMLUtility"%>
-<%@page import="in.co.rays.project_3.util.PropertyReader"%>
+<%@page import="in.co.rays.project_3.controller.ORSView"%>
 
-
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-
-<!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Investor List View</title>
+<title>Investor List</title>
 
 <script src="<%=ORSView.APP_CONTEXT%>/js/jquery.min.js"></script>
 <script src="<%=ORSView.APP_CONTEXT%>/js/CheckBox11.js"></script>
 
 <style>
-.p4 {
-	background-image: url('<%=ORSView.APP_CONTEXT%>/img/list2.jpg');
-	background-repeat: no-repeat;
-	background-attachment: fixed;
+.hm {
+	background-image: url('<%=ORSView.APP_CONTEXT%>/img/list.png');
 	background-size: cover;
 	padding-top: 85px;
 }
@@ -32,14 +23,10 @@
 .text {
 	text-align: center;
 }
-
-.table-hover tbody tr:hover td {
-	background-color: #0064ff36;
-}
 </style>
 </head>
 
-<body class="p4">
+<body class="hm">
 
 	<%@include file="Header.jsp"%>
 
@@ -59,166 +46,159 @@
 			}
 
 			List list = ServletUtility.getList(request);
+			Iterator<InvestorDTO> it = list.iterator();
 		%>
 
 		<center>
-			<h1 class="text-primary font-weight-bold pt-3">
-				<font color="black">Investor List</font>
+			<h1 class="text-dark font-weight-bold pt-3">
+				<u>Investor List</u>
 			</h1>
 		</center>
 
-		<br>
-
-		<!-- 🔍 Search Panel -->
-		<div class="container">
-			<div class="row">
-
-				<div class="col-md-3">
-					<input type="text" name="investorName" class="form-control"
-						placeholder="Investor Name"
-						value="<%=DataUtility.getStringData(dto.getInvestorName())%>">
-				</div>
-
-				<div class="col-md-3">
-					<input type="text" name="investorCode" class="form-control"
-						placeholder="Investor Code"
-						value="<%=DataUtility.getStringData(dto.getInvestorcode())%>">
-				</div>
-
-				<div class="col-md-3">
-					<input type="text" name="investmentType" class="form-control"
-						placeholder="Investment Type"
-						value="<%=DataUtility.getStringData(dto.getInvestmentType())%>">
-				</div>
-
-				<div class="col-md-3">
-					<input type="submit" name="operation"
-						class="btn btn-primary btn-md"
-						value="<%=InvestorListCtl.OP_SEARCH%>"> <input
-						type="submit" name="operation" class="btn btn-secondary btn-md"
-						value="<%=InvestorListCtl.OP_RESET%>">
-				</div>
-
+		<!-- Success -->
+		<div class="row">
+			<div class="col-md-4"></div>
+			<%
+				if (!ServletUtility.getSuccessMessage(request).equals("")) {
+			%>
+			<div class="col-md-4 alert alert-success">
+				<%=ServletUtility.getSuccessMessage(request)%>
 			</div>
+			<%
+				}
+			%>
+			<div class="col-md-4"></div>
+		</div>
+
+		<!-- Error -->
+		<div class="row">
+			<div class="col-md-4"></div>
+			<%
+				if (!ServletUtility.getErrorMessage(request).equals("")) {
+			%>
+			<div class="col-md-4 alert alert-danger">
+				<%=ServletUtility.getErrorMessage(request)%>
+			</div>
+			<%
+				}
+			%>
+			<div class="col-md-4"></div>
+		</div>
+
+		<!-- Search -->
+		<div class="row">
+
+			<div class="col-sm-2"></div>
+
+			<div class="col-sm-2">
+				<input type="text" name="investorName" class="form-control"
+					placeholder="Investor Name"
+					value="<%=DataUtility.getStringData(dto.getInvestorName())%>">
+			</div>
+
+			<div class="col-sm-2">
+				<input type="text" name="investorCode" class="form-control"
+					placeholder="Investor Code"
+					value="<%=DataUtility.getStringData(dto.getInvestorcode())%>">
+			</div>
+
+			<div class="col-sm-2">
+				<input type="text" name="investmentType" class="form-control"
+					placeholder="Investment Type"
+					value="<%=DataUtility.getStringData(dto.getInvestmentType())%>">
+			</div>
+
+			<div class="col-sm-3">
+				<input type="submit" class="btn btn-primary" name="operation"
+					value="<%=InvestorListCtl.OP_SEARCH%>"> <input
+					type="submit" class="btn btn-dark" name="operation"
+					value="<%=InvestorListCtl.OP_RESET%>">
+			</div>
+
 		</div>
 
 		<br>
 
-		<!-- Success Message -->
-		<%
-			if (!ServletUtility.getSuccessMessage(request).equals("")) {
-		%>
-		<div class="alert alert-success text-center">
-			<%=ServletUtility.getSuccessMessage(request)%>
-		</div>
-		<%
-			}
-		%>
-
-		<!-- Error Message -->
-		<%
-			if (!ServletUtility.getErrorMessage(request).equals("")) {
-		%>
-		<div class="alert alert-danger text-center">
-			<%=ServletUtility.getErrorMessage(request)%>
-		</div>
-		<%
-			}
-		%>
-
-		<br>
-
-		<%
-			if (list != null && list.size() > 0) {
-				Iterator<InvestorDTO> it = list.iterator();
-		%>
-
+		<!-- TABLE -->
 		<div class="table-responsive">
-			<table class="table table-bordered table-dark table-hover">
+			<table class="table table-bordered table-striped table-hover">
 
 				<thead>
-					<tr style="background-color: #8C8C8C;">
+					<tr style="background-color: #f79d65; font-size: 18px;">
+
 						<th width="10%"><input type="checkbox" id="select_all">
 							Select All</th>
+
 						<th class="text">S.NO</th>
 						<th class="text">Investor Name</th>
 						<th class="text">Investor Code</th>
 						<th class="text">Investment Amount</th>
 						<th class="text">Investment Type</th>
 						<th class="text">Edit</th>
+
 					</tr>
 				</thead>
 
 				<tbody>
+
 					<%
 						while (it.hasNext()) {
-								dto = it.next();
+							dto = it.next();
 					%>
 
-					<tr>
+					<tr style="font-weight: bold;">
+
 						<td align="center"><input type="checkbox" class="checkbox"
 							name="ids" value="<%=dto.getId()%>"></td>
 
-						<td align="center"><%=index++%></td>
-						<td align="center"><%=dto.getInvestorName()%></td>
-						<td align="center"><%=dto.getInvestorcode()%></td>
-						<td align="center"><%=dto.getInvestmentAmount()%></td>
-						<td align="center"><%=dto.getInvestmentType()%></td>
+						<td class="text"><%=index++%></td>
+						<td class="text"><%=dto.getInvestorName()%></td>
+						<td class="text"><%=dto.getInvestorcode()%></td>
+						<td class="text"><%=dto.getInvestmentAmount()%></td>
+						<td class="text"><%=dto.getInvestmentType()%></td>
 
-						<td align="center"><a href="InvestorCtl?id=<%=dto.getId()%>">Edit</a>
+						<td class="text"><a href="InvestorCtl?id=<%=dto.getId()%>">Edit</a>
 						</td>
+
 					</tr>
 
 					<%
 						}
 					%>
+
 				</tbody>
 			</table>
 		</div>
 
-		<!-- Pagination Buttons -->
+		<!-- Buttons -->
 		<table width="100%">
 			<tr>
+
 				<td><input type="submit" name="operation"
-					class="btn btn-secondary btn-md"
-					value="<%=InvestorListCtl.OP_PREVIOUS%>"
+					class="btn btn-warning" value="<%=InvestorListCtl.OP_PREVIOUS%>"
 					<%=pageNo > 1 ? "" : "disabled"%>></td>
 
 				<td><input type="submit" name="operation"
-					class="btn btn-primary btn-md" value="<%=InvestorListCtl.OP_NEW%>">
+					class="btn btn-primary" value="<%=InvestorListCtl.OP_NEW%>">
 				</td>
 
 				<td><input type="submit" name="operation"
-					class="btn btn-danger btn-md"
-					value="<%=InvestorListCtl.OP_DELETE%>"></td>
+					class="btn btn-danger" value="<%=InvestorListCtl.OP_DELETE%>">
+				</td>
 
 				<td align="right"><input type="submit" name="operation"
-					class="btn btn-secondary btn-md"
-					value="<%=InvestorListCtl.OP_NEXT%>"
+					class="btn btn-warning" value="<%=InvestorListCtl.OP_NEXT%>"
 					<%=(nextPageSize != 0) ? "" : "disabled"%>></td>
+
 			</tr>
 		</table>
-
-		<%
-			} else {
-		%>
-
-		<center>
-			<h2>No Record Found</h2>
-			<br> <input type="submit" name="operation"
-				class="btn btn-primary btn-md" value="<%=InvestorListCtl.OP_BACK%>">
-		</center>
-
-		<%
-			}
-		%>
 
 		<input type="hidden" name="pageNo" value="<%=pageNo%>"> <input
 			type="hidden" name="pageSize" value="<%=pageSize%>">
 
 	</form>
 
-</body>
+	<%@include file="FooterView.jsp"%>
 
-<%@include file="FooterView.jsp"%>
+</body>
 </html>

@@ -19,6 +19,10 @@ import in.co.rays.project_3.util.DataUtility;
 import in.co.rays.project_3.util.PropertyReader;
 import in.co.rays.project_3.util.ServletUtility;
 
+/**
+ * @author NeerajMewada
+ *
+ */
 @WebServlet(name = "InvestorListCtl", urlPatterns = { "/ctl/InvestorListCtl" })
 public class InvestorListCtl extends BaseCtl {
 

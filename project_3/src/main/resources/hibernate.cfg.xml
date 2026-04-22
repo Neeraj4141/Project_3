@@ -50,8 +50,6 @@
 		<mapping resource="in/co/rays/project_3/hbm/HostelDTO.hbm.xml" />
 		<mapping
 			resource="in/co/rays/project_3/hbm/ResturentDTO.hbm.xml" />
-		<mapping
-			resource="in/co/rays/project_3/hbm/InvestorDTO.hbm.xml" />
 		<mapping resource="in/co/rays/project_3/hbm/LockerDTO.hbm.xml" />
 		<mapping
 			resource="in/co/rays/project_3/hbm/PortfolioDTO.hbm.xml" />
@@ -62,7 +60,6 @@
 		<mapping
 			resource="in/co/rays/project_3/hbm/BankAccountDTO.hbm.xml" />
 		<mapping resource="in/co/rays/project_3/hbm/PolicyDTO.hbm.xml" />
-
 		<mapping
 			resource="in/co/rays/project_3/hbm/PrescriptionDTO.hbm.xml" />
 		<mapping resource="in/co/rays/project_3/hbm/ReportDTO.hbm.xml" />
@@ -86,6 +83,8 @@
 		<mapping
 			resource="in/co/rays/project_3/hbm/NotificationDTO.hbm.xml" />
 		<mapping resource="in/co/rays/project_3/hbm/RuleDTO.hbm.xml" />
+		<mapping
+			resource="in/co/rays/project_3/hbm/InvestorDTO.hbm.xml" />
 
 
 
