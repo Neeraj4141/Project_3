@@ -305,4 +305,12 @@ public interface ORSView {
 	public String RULE_VIEW = PAGE_FOLDER + "/RuleView.jsp";
 
 	public String RULE_LIST_VIEW = PAGE_FOLDER + "/RuleListView.jsp";
+	
+	public String AUDIT_CTL = APP_CONTEXT + "/ctl/AuditCtl";
+
+	public String AUDIT_LIST_CTL = APP_CONTEXT + "/ctl/AuditListCtl";
+
+	public String AUDIT_VIEW = PAGE_FOLDER + "/AuditView.jsp";
+
+	public String AUDIT_LIST_VIEW = PAGE_FOLDER + "/AuditListView.jsp";
 }

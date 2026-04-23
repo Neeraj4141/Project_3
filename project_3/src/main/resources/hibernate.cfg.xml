@@ -85,6 +85,7 @@
 		<mapping resource="in/co/rays/project_3/hbm/RuleDTO.hbm.xml" />
 		<mapping
 			resource="in/co/rays/project_3/hbm/InvestorDTO.hbm.xml" />
+		<mapping resource="in/co/rays/project_3/hbm/AuditDTO.hbm.xml" />
 
 
 

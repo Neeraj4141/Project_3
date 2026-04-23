@@ -521,6 +521,20 @@
 							class="fa fa-paste"></i>Investor List</a>
 					</div></li>
 
+				<li class="nav-item dropdown" style="padding-left: 5px"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">Audit
+					</font></a>
+
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+						<a class="dropdown-item" href="<%=ORSView.AUDIT_CTL%>"><i
+							class="fa fa-sort-amount-down"></i>Add Audit</a> <a
+							class="dropdown-item" href="<%=ORSView.AUDIT_LIST_CTL%>"><i
+							class="fa fa-paste"></i>Audit List</a>
+					</div></li>
+
 				<%
 					}
 					}

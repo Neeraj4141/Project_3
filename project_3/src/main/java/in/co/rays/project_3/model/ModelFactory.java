@@ -491,7 +491,7 @@ public final class ModelFactory {
 
 		return notificationModel;
 	}
-	
+
 	public RuleModelInt getRuleModel() {
 
 		RuleModelInt ruleModel = (RuleModelInt) modelCache.get("ruleModel");
@@ -504,5 +504,19 @@ public final class ModelFactory {
 		}
 
 		return ruleModel;
+	}
+
+	public AuditModelInt getAuditModel() {
+
+		AuditModelInt auditModel = (AuditModelInt) modelCache.get("auditModel");
+
+		if (auditModel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				auditModel = new AuditModelHibImpl();
+			}
+		}
+
+		return auditModel;
 	}
 }
