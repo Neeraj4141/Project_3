@@ -27,7 +27,7 @@ import net.sf.jasperreports.engine.JasperReport;
  * Jasper functionality Controller. Performs operation for Print pdf of
  * MarksheetMeriteList
  *
- * @author Neeraj Mewada 
+ * @author Neeraj Mewada
  */
 @WebServlet(name = "JasperCtl", urlPatterns = { "/ctl/JasperCtl" })
 public class JasperCtl extends BaseCtl {
@@ -36,7 +36,7 @@ public class JasperCtl extends BaseCtl {
 	 * 
 	 *
 	 */
-	
+
 	private static final long serialVersionUID = 1L;
 
 	@Override
@@ -46,8 +46,8 @@ public class JasperCtl extends BaseCtl {
 
 			ResourceBundle rb = ResourceBundle.getBundle("in.co.rays.project_3.bundle.system");
 
-//			InputStream jrxmlStream = getClass().getClassLoader().getResourceAsStream("reports/Neeraj1.jrxml");
-//			System.out.println(jrxmlStream);
+			InputStream jrxmlStream = getClass().getClassLoader().getResourceAsStream("reports/Neeraj1.jrxml");
+			System.out.println(jrxmlStream);
 
 			JasperReport jasperReport = JasperCompileManager.compileReport(rb.getString("jasperctl"));
 

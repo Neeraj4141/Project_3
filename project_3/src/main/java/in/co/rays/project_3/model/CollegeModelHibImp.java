@@ -115,13 +115,18 @@ public class CollegeModelHibImp implements CollegeModelInt {
 			}
 			list = criteria.list();
 
-		} catch (JDBCConnectionException e) {
+		}catch (JDBCConnectionException e) {
+			
 			throw e;
-		} catch (HibernateException e) {
+		}
+		catch (HibernateException e) {
 
 			throw new ApplicationException("Exception : Exception in  College list");
 		} finally {
-			session.close();
+			if (session != null) {
+				
+				session.close();
+			}
 		}
 
 		return list;

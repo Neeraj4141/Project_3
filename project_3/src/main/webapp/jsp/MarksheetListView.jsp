@@ -125,7 +125,8 @@
 			<div style="margin-bottom: 20px;" class="table-responsive">
 				<table class="table  table-striped table-bordered table-hover">
 					<thead>
-						<tr align="center" style="background-color: #f79d65; font-size: 18px;">
+						<tr align="center"
+							style="background-color: #f79d65; font-size: 18px;">
 
 							<th width="10%"><input type="checkbox" id="select_all"
 								name="Select" class="text"> Select All</th>

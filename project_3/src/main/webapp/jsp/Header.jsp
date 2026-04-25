@@ -354,7 +354,7 @@
 							class="fa fa-paste"></i>Report List</a>
 					</div></li> --%>
 
-				<li class="nav-item dropdown" style="padding-left: 5px"><a
+				<%-- 	<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> <font style="color: white;">Insurance
@@ -366,8 +366,8 @@
 							class="fa fa-sort-amount-down"></i>Add Insurance</a> <a
 							class="dropdown-item" href="<%=ORSView.INSURANCE_LIST_CTL%>"><i
 							class="fa fa-paste"></i>Insurance List</a>
-					</div></li>
-				<li class="nav-item dropdown" style="padding-left: 5px"><a
+					 		</div></li> --%>
+				<%--	<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> <font style="color: white;">SpaceMission
@@ -393,7 +393,7 @@
 							class="fa fa-sort-amount-down"></i>Add Contract</a> <a
 							class="dropdown-item" href="<%=ORSView.CONTRACT_LIST_CTL%>"><i
 							class="fa fa-paste"></i>Contract List</a>
-					</div></li>
+					</div></li> --%>
 
 				<%-- 	<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
@@ -410,19 +410,20 @@
 					</div></li>
  --%>
 
-				<li class="nav-item dropdown" style="padding-left: 5px"><a
-					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> <font style="color: white;">Advertisement
-					</font></a>
+				<%-- 	<li class="nav-item dropdown" style="padding-left: 5px"><a
+							class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+							role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false"> <font style="color: white;">Advertisement
+							</font></a>
 
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-						<a class="dropdown-item" href="<%=ORSView.ADVERTISEMENT_CTL%>"><i
-							class="fa fa-sort-amount-down"></i>Add Advertisement</a> <a
-							class="dropdown-item" href="<%=ORSView.ADVERTISEMENT_LIST_CTL%>"><i
-							class="fa fa-paste"></i>Advertisement List</a>
-					</div></li>
+								<a class="dropdown-item" href="<%=ORSView.ADVERTISEMENT_CTL%>"><i
+									class="fa fa-sort-amount-down"></i>Add Advertisement</a> <a
+									class="dropdown-item"
+									href="<%=ORSView.ADVERTISEMENT_LIST_CTL%>"><i
+									class="fa fa-paste"></i>Advertisement List</a>
+							</div></li> --%>
 				<%-- 	<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -437,19 +438,19 @@
 							class="fa fa-paste"></i>Notification List</a>
 					</div></li> --%>
 
-				<li class="nav-item dropdown" style="padding-left: 5px"><a
-					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> <font style="color: white;">Case
-					</font></a>
+				<%-- 	<li class="nav-item dropdown" style="padding-left: 5px"><a
+							class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+							role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false"> <font style="color: white;">Case
+							</font></a>
 
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-						<a class="dropdown-item" href="<%=ORSView.CASE_CTL%>"><i
-							class="fa fa-sort-amount-down"></i>Add Case</a> <a
-							class="dropdown-item" href="<%=ORSView.CASE_LIST_CTL%>"><i
-							class="fa fa-paste"></i>Case List</a>
-					</div></li>
+								<a class="dropdown-item" href="<%=ORSView.CASE_CTL%>"><i
+									class="fa fa-sort-amount-down"></i>Add Case</a> <a
+									class="dropdown-item" href="<%=ORSView.CASE_LIST_CTL%>"><i
+									class="fa fa-paste"></i>Case List</a>
+							</div></li> --%>
 
 				<%-- <li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
@@ -465,75 +466,76 @@
 							class="fa fa-paste"></i>Environment List</a>
 					</div></li> --%>
 
-				<li class="nav-item dropdown" style="padding-left: 5px"><a
-					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> <font style="color: white;">DataRetention
-					</font></a>
+				<%-- 	<li class="nav-item dropdown" style="padding-left: 5px"><a
+							class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+							role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false"> <font style="color: white;">DataRetention
+							</font></a>
 
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-						<a class="dropdown-item" href="<%=ORSView.DATARETENTION_CTL%>"><i
-							class="fa fa-sort-amount-down"></i>Add DataRetention </a> <a
-							class="dropdown-item" href="<%=ORSView.DATARETENTION_LIST_CTL%>"><i
-							class="fa fa-paste"></i>DataRetention List</a>
-					</div></li>
+								<a class="dropdown-item" href="<%=ORSView.DATARETENTION_CTL%>"><i
+									class="fa fa-sort-amount-down"></i>Add DataRetention </a> <a
+									class="dropdown-item"
+									href="<%=ORSView.DATARETENTION_LIST_CTL%>"><i
+									class="fa fa-paste"></i>DataRetention List</a>
+							</div></li> --%>
 
-				<li class="nav-item dropdown" style="padding-left: 5px"><a
-					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> <font style="color: white;">WebHookLog
-					</font></a>
+				<%-- <li class="nav-item dropdown" style="padding-left: 5px"><a
+							class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+							role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false"> <font style="color: white;">WebHookLog
+							</font></a>
 
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-						<a class="dropdown-item" href="<%=ORSView.WEBHOOK_CTL%>"><i
-							class="fa fa-sort-amount-down"></i>Add WebHookLog </a> <a
-							class="dropdown-item" href="<%=ORSView.WEBHOOK_LIST_CTL%>"><i
-							class="fa fa-paste"></i>WebHookLog List</a>
-					</div></li>
+								<a class="dropdown-item" href="<%=ORSView.WEBHOOK_CTL%>"><i
+									class="fa fa-sort-amount-down"></i>Add WebHookLog </a> <a
+									class="dropdown-item" href="<%=ORSView.WEBHOOK_LIST_CTL%>"><i
+									class="fa fa-paste"></i>WebHookLog List</a>
+							</div></li>
 
 
-				<li class="nav-item dropdown" style="padding-left: 5px"><a
-					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> <font style="color: white;">NotificationRule
-					</font></a>
+						<li class="nav-item dropdown" style="padding-left: 5px"><a
+							class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+							role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false"> <font style="color: white;">NotificationRule
+							</font></a>
 
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-						<a class="dropdown-item" href="<%=ORSView.RULE_CTL%>"><i
-							class="fa fa-sort-amount-down"></i>Add NotificationRule</a> <a
-							class="dropdown-item" href="<%=ORSView.RULE_LIST_CTL%>"><i
-							class="fa fa-paste"></i>NotificationRule List</a>
-					</div></li>
-				<li class="nav-item dropdown" style="padding-left: 5px"><a
-					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> <font style="color: white;">Investor
-					</font></a>
+								<a class="dropdown-item" href="<%=ORSView.RULE_CTL%>"><i
+									class="fa fa-sort-amount-down"></i>Add NotificationRule</a> <a
+									class="dropdown-item" href="<%=ORSView.RULE_LIST_CTL%>"><i
+									class="fa fa-paste"></i>NotificationRule List</a>
+							</div></li>
+						<li class="nav-item dropdown" style="padding-left: 5px"><a
+							class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+							role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false"> <font style="color: white;">Investor
+							</font></a>
 
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-						<a class="dropdown-item" href="<%=ORSView.INVESTOR_CTL%>"><i
-							class="fa fa-sort-amount-down"></i>Add Investor</a> <a
-							class="dropdown-item" href="<%=ORSView.INVESTOR_LIST_CTL%>"><i
-							class="fa fa-paste"></i>Investor List</a>
-					</div></li>
+								<a class="dropdown-item" href="<%=ORSView.INVESTOR_CTL%>"><i
+									class="fa fa-sort-amount-down"></i>Add Investor</a> <a
+									class="dropdown-item" href="<%=ORSView.INVESTOR_LIST_CTL%>"><i
+									class="fa fa-paste"></i>Investor List</a>
+							</div></li>
 
-				<li class="nav-item dropdown" style="padding-left: 5px"><a
-					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> <font style="color: white;">Audit
-					</font></a>
+						<li class="nav-item dropdown" style="padding-left: 5px"><a
+							class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+							role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false"> <font style="color: white;">Audit
+							</font></a>
 
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-						<a class="dropdown-item" href="<%=ORSView.AUDIT_CTL%>"><i
-							class="fa fa-sort-amount-down"></i>Add Audit</a> <a
-							class="dropdown-item" href="<%=ORSView.AUDIT_LIST_CTL%>"><i
-							class="fa fa-paste"></i>Audit List</a>
-					</div></li>
+								<a class="dropdown-item" href="<%=ORSView.AUDIT_CTL%>"><i
+									class="fa fa-sort-amount-down"></i>Add Audit</a> <a
+									class="dropdown-item" href="<%=ORSView.AUDIT_LIST_CTL%>"><i
+									class="fa fa-paste"></i>Audit List</a>
+							</div></li> --%>
 
 				<%
 					}
@@ -570,6 +572,7 @@
 				<%
 					}
 				%>
+
 			</ul>
 		</div>
 		</nav>

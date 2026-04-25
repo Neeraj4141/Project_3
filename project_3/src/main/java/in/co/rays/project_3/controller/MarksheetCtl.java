@@ -34,29 +34,28 @@ import in.co.rays.project_3.util.ServletUtility;
 public class MarksheetCtl extends BaseCtl {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	private static Logger log = Logger.getLogger(MarksheetCtl.class);
 
 	protected void preload(HttpServletRequest request) {
-		
+
 		StudentModelInt model = ModelFactory.getInstance().getStudentModel();
 		try {
 			List li = model.list();
 			request.setAttribute("studenList", li);
 			System.out.println("add marksheet" + li);
-
-		} catch (Exception e) {
+		} catch (ApplicationException e) {
 			e.printStackTrace();
 			log.error(e);
 		}
 	}
 
 	protected boolean validate(HttpServletRequest request) {
-		
+
 		log.debug("marksheet validate bean start");
-		
+
 		boolean pass = true;
-		
+
 		String id = request.getParameter("studentId");
 		if (DataValidator.isNull(request.getParameter("roll"))) {
 			request.setAttribute("roll", PropertyReader.getValue("error.require", "Roll No"));
@@ -121,11 +120,11 @@ public class MarksheetCtl extends BaseCtl {
 	}
 
 	protected BaseDTO populateDTO(HttpServletRequest request) {
-		
+
 		log.debug("marksheet populate bean start");
-		
+
 		MarksheetDTO dto = new MarksheetDTO();
-		
+
 		String id = request.getParameter("studentId");
 		String id1 = id.trim();
 		dto.setRollNo(request.getParameter("roll"));
@@ -137,7 +136,7 @@ public class MarksheetCtl extends BaseCtl {
 		dto.setMaths(DataUtility.getInt(request.getParameter("maths")));
 
 		populateBean(dto, request);
-		
+
 		log.debug("marksheet populate bean end");
 		return dto;
 
@@ -149,13 +148,13 @@ public class MarksheetCtl extends BaseCtl {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
-		
+
 		log.debug("marksheet ctl doget  start");
-		
+
 		long id = DataUtility.getLong(request.getParameter("id"));
-		
+
 		MarksheetModelInt model = ModelFactory.getInstance().getMarksheetModel();
-		
+
 		if (id > 0) {
 			MarksheetDTO dto;
 			try {
@@ -177,7 +176,7 @@ public class MarksheetCtl extends BaseCtl {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
-		
+
 		log.debug("marksheet ctl dopost  start");
 
 		String op = DataUtility.getString(request.getParameter("operation"));
@@ -234,7 +233,7 @@ public class MarksheetCtl extends BaseCtl {
 
 	@Override
 	protected String getView() {
-		
+
 		return ORSView.MARKSHEET_VIEW;
 	}
 
