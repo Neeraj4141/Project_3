@@ -71,11 +71,11 @@ i.css {
 
 								if (dto.getId() != null) {
 							%>
-							<h3 class="text-center text-primary">Update Faculty</h3>
+							<h3 class="text-center text-primary font-weight-bold">Update Faculty</h3>
 							<%
 								} else {
 							%>
-							<h3 class="text-center text-primary">Add Faculty</h3>
+							<h3 class="text-center text-primary font-weight-bold">Add Faculty</h3>
 							<%
 								}
 							%>

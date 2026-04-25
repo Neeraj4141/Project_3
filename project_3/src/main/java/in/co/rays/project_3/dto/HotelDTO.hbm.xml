@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25-Apr-2026, 10:26:54 am by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <subclass name="in.co.rays.project_3.dto.HotelDTO" extends="in.co.rays.project_3.dto.BaseDTO" discriminator-value="HotelDTO" lazy="false">
+        <property name="firstName" type="java.lang.String">
+            <column name="FIRSTNAME" />
+        </property>
+        <property name="lastName" type="java.lang.String">
+            <column name="LASTNAME" />
+        </property>
+        <property name="gender" type="java.lang.String">
+            <column name="GENDER" />
+        </property>
+        <property name="roomNo" type="java.lang.Long">
+            <column name="ROOMNO" />
+        </property>
+        <property name="cheackOut" type="java.util.Date">
+            <column name="CHEACKOUT" />
+        </property>
+        <property name="cheackIn" type="java.util.Date">
+            <column name="CHEACKIN" />
+        </property>
+        <property name="mobileNo" type="java.lang.String">
+            <column name="MOBILENO" />
+        </property>
+    </subclass>
+</hibernate-mapping>

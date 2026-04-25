@@ -66,12 +66,12 @@ i.css {
 
 								if (dto.getFirstName() != null && dto.getId() > 0) {
 							%>
-							<h3 class="text-center default-text text-primary">Update
+							<h3 class="text-center text-primary font-weight-bold">Update
 								User</h3>
 							<%
 								} else {
 							%>
-							<h3 class="text-center default-text text-primary">Add User</h3>
+							<h3 class="text-center text-primary font-weight-bold">Add User</h3>
 							<%
 								}
 							%>

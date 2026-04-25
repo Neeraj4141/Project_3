@@ -313,4 +313,12 @@ public interface ORSView {
 	public String AUDIT_VIEW = PAGE_FOLDER + "/AuditView.jsp";
 
 	public String AUDIT_LIST_VIEW = PAGE_FOLDER + "/AuditListView.jsp";
+	
+	public String HOTEL_CTL = APP_CONTEXT + "/ctl/HotelCtl";
+
+	public String HOTEL_LIST_CTL = APP_CONTEXT + "/ctl/HotelListCtl";
+
+	public String HOTEL_VIEW = PAGE_FOLDER + "/HotelView.jsp";
+
+	public String HOTEL_LIST_VIEW = PAGE_FOLDER + "/HotelListView.jsp";
 }

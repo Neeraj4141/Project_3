@@ -59,11 +59,11 @@ i.css {
 
 								if (dto.getId() != null) {
 							%>
-							<h3 class="text-center  text-primary">Update Subject</h3>
+							<h3 class="text-center text-primary font-weight-bold">Update Subject</h3>
 							<%
 								} else {
 							%>
-							<h3 class="text-center  text-primary">Add Subject</h3>
+							<h3 class="text-center text-primary font-weight-bold">Add Subject</h3>
 							<%
 								}
 							%>

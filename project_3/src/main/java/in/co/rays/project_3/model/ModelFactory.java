@@ -519,4 +519,18 @@ public final class ModelFactory {
 
 		return auditModel;
 	}
+	
+	public HotelModelInt getHotelModel() {
+
+		HotelModelInt hotelModel = (HotelModelInt) modelCache.get("hotelModel");
+
+		if (hotelModel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				hotelModel = new HotelModelHibImpl();
+			}
+		}
+
+		return hotelModel;
+	}
 }

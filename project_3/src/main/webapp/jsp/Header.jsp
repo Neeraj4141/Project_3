@@ -537,6 +537,20 @@
 									class="fa fa-paste"></i>Audit List</a>
 							</div></li> --%>
 
+				<li class="nav-item dropdown" style="padding-left: 5px"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">Hotel
+					</font></a>
+
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+						<a class="dropdown-item" href="<%=ORSView.HOTEL_CTL%>"><i
+							class="fa fa-sort-amount-down"></i>Add Hotel</a> <a
+							class="dropdown-item" href="<%=ORSView.HOTEL_LIST_CTL%>"><i
+							class="fa fa-paste"></i>Hotel List</a>
+					</div></li>
+
 				<%
 					}
 					}

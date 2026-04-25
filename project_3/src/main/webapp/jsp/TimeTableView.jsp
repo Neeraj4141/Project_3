@@ -67,11 +67,11 @@ i.css {
 
 								if (dto.getId() != null) {
 							%>
-							<h3 class="text-center text-primary">Update Time Table</h3>
+							<h3 class="text-center text-primary font-weight-bold">Update Time Table</h3>
 							<%
 								} else {
 							%>
-							<h3 class="text-center text-primary">Add Time Table</h3>
+							<h3 class="text-center text-primary font-weight-bold">Add Time Table</h3>
 							<%
 								}
 							%>
