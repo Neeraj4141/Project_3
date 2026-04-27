@@ -1,6 +1,7 @@
 package in.co.rays.project_3.controller;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
@@ -23,78 +24,79 @@ import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 
 /**
- * Jasper functionality Controller. Performs operation for Print pdf
+ * Jasper functionality Controller. Performs operation for Print pdf of
+ * MarksheetMeriteList
+ *
+ * @author Neeraj Mewada
  */
 @WebServlet(name = "JasperCtl", urlPatterns = { "/ctl/JasperCtl" })
 public class JasperCtl extends BaseCtl {
 
-    private static final long serialVersionUID = 1L;
+	/**
+	 * 
+	 *
+	 */
 
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+	private static final long serialVersionUID = 1L;
 
-        try {
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		try {
 
-            ResourceBundle rb = ResourceBundle.getBundle("in.co.rays.project_3.bundle.system");
+			ResourceBundle rb = ResourceBundle.getBundle("in.co.rays.project_3.bundle.system");
 
-            // ✅ Step 1: Docker env variable try karo
-            String path = System.getenv("REPORT_PATH");
+			InputStream jrxmlStream = getClass().getClassLoader().getResourceAsStream("reports/P3.jrxml");
+			System.out.println(jrxmlStream);
 
-            // ✅ Step 2: Agar Docker me nahi mila → properties use karo
-            if (path == null || path.trim().isEmpty()) {
-                path = rb.getString("jasperctl");
-            }
+			JasperReport jasperReport = JasperCompileManager.compileReport(jrxmlStream);
 
-            System.out.println("Jasper Path: " + path);
+			HttpSession session = request.getSession(true);
 
-            // ✅ Compile report
-            JasperReport jasperReport = JasperCompileManager.compileReport(path);
+			UserDTO dto = (UserDTO) session.getAttribute("user");
 
-            HttpSession session = request.getSession(true);
+			dto.getFirstName();
+			dto.getLastName();
 
-            UserDTO dto = (UserDTO) session.getAttribute("user");
+			Map<String, Object> map = new HashMap<String, Object>();
 
-            dto.getFirstName();
-            dto.getLastName();
+			map.put("ID", 1l);
+			java.sql.Connection conn = null;
 
-            Map<String, Object> map = new HashMap<String, Object>();
-            map.put("ID", 1l);
+			String Database = rb.getString("DATABASE");
 
-            java.sql.Connection conn = null;
+			if ("Hibernate".equalsIgnoreCase(Database)) {
+				conn = ((SessionImpl) HibDataSource.getSession()).connection();
+			}
 
-            String Database = rb.getString("DATABASE");
+			if ("JDBC".equalsIgnoreCase(Database)) {
+				conn = JDBCDataSource.getConnection();
+			}
 
-            if ("Hibernate".equalsIgnoreCase(Database)) {
-                conn = ((SessionImpl) HibDataSource.getSession()).connection();
-            }
+			/* Filling data into the report */
+			JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, map, conn);
 
-            if ("JDBC".equalsIgnoreCase(Database)) {
-                conn = JDBCDataSource.getConnection();
-            }
+			/* Export Jasper report */
+			byte[] pdf = JasperExportManager.exportReportToPdf(jasperPrint);
 
-            // ✅ Fill report
-            JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, map, conn);
+			response.setContentType("application/pdf");
+			response.getOutputStream().write(pdf);
+			response.getOutputStream().flush();
 
-            // ✅ Export PDF
-            byte[] pdf = JasperExportManager.exportReportToPdf(jasperPrint);
+		} catch (Exception e) {
+			e.printStackTrace();
 
-            response.setContentType("application/pdf");
-            response.getOutputStream().write(pdf);
-            response.getOutputStream().flush();
+		}
+	}
 
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException {
-    }
+	}
 
-    @Override
-    protected String getView() {
-        return null;
-    }
+	@Override
+	protected String getView() {
+		return null;
+	}
+
 }
