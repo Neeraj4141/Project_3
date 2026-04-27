@@ -45,7 +45,7 @@ public class JasperCtl extends BaseCtl {
 			
 			String path = (System.getenv("DOCKER_ENV") == null)
 					? rb.getString("jasperctl")           // 💻 Manual
-					: "/reports/Neeraj1.jrxml";           // 🐳 Docker
+					: "/reports/Collage.jrxml";           // 🐳 Docker
 
 			System.out.println("Loading report from: " + path);
 
