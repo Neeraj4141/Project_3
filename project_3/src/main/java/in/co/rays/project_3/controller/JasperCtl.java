@@ -46,7 +46,7 @@ public class JasperCtl extends BaseCtl {
 
 			ResourceBundle rb = ResourceBundle.getBundle("in.co.rays.project_3.bundle.system");
 
-			InputStream jrxmlStream = getClass().getClassLoader().getResourceAsStream("/opt/report/P3.jrxml");
+			InputStream jrxmlStream = getClass().getClassLoader().getResourceAsStream("/report/Neeraj1.jrxml");
 			System.out.println(jrxmlStream);
 
 			JasperReport jasperReport = JasperCompileManager.compileReport(jrxmlStream);
