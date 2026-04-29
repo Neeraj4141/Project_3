@@ -1,7 +1,7 @@
 package in.co.rays.project_3.controller;
 
 /**
- * ORS View Provide Loose Coupling
+ * ORS View Provide Loose Cupling
  * 
  * @author Neeraj Mewada
  *
@@ -305,7 +305,7 @@ public interface ORSView {
 	public String RULE_VIEW = PAGE_FOLDER + "/RuleView.jsp";
 
 	public String RULE_LIST_VIEW = PAGE_FOLDER + "/RuleListView.jsp";
-	
+
 	public String AUDIT_CTL = APP_CONTEXT + "/ctl/AuditCtl";
 
 	public String AUDIT_LIST_CTL = APP_CONTEXT + "/ctl/AuditListCtl";
@@ -313,7 +313,7 @@ public interface ORSView {
 	public String AUDIT_VIEW = PAGE_FOLDER + "/AuditView.jsp";
 
 	public String AUDIT_LIST_VIEW = PAGE_FOLDER + "/AuditListView.jsp";
-	
+
 	public String HOTEL_CTL = APP_CONTEXT + "/ctl/HotelCtl";
 
 	public String HOTEL_LIST_CTL = APP_CONTEXT + "/ctl/HotelListCtl";
@@ -321,4 +321,12 @@ public interface ORSView {
 	public String HOTEL_VIEW = PAGE_FOLDER + "/HotelView.jsp";
 
 	public String HOTEL_LIST_VIEW = PAGE_FOLDER + "/HotelListView.jsp";
+
+	public String EMPLOYEE_CTL = APP_CONTEXT + "/ctl/EmployeeCtl";
+
+	public String EMPLOYEE_LIST_CTL = APP_CONTEXT + "/ctl/EmployeeListCtl";
+
+	public String EMPLOYEE_VIEW = PAGE_FOLDER + "/EmployeeView.jsp";
+
+	public String EMPLOYEE_LIST_VIEW = PAGE_FOLDER + "/EmployeeListView.jsp";
 }

@@ -6,7 +6,7 @@ import java.util.ResourceBundle;
 /**
  * ModelFactory decides which model implementation run ---
  * 
- * @author Neeraj Mewada
+ * @author NeerajMewada
  * 
  * 
  *
@@ -519,7 +519,7 @@ public final class ModelFactory {
 
 		return auditModel;
 	}
-	
+
 	public HotelModelInt getHotelModel() {
 
 		HotelModelInt hotelModel = (HotelModelInt) modelCache.get("hotelModel");
@@ -532,5 +532,35 @@ public final class ModelFactory {
 		}
 
 		return hotelModel;
+	}
+
+	public EmployeeModelInt getEmployeeModel() {
+
+		EmployeeModelInt employeeModel = (EmployeeModelInt) modelCache.get("employeeModel");
+
+		if (employeeModel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				employeeModel = new EmployeeModelHibImpl();
+			}
+
+			modelCache.put("employeeModel", employeeModel); // cache me store karna important hai
+		}
+
+		return employeeModel;
+	}
+
+	public EmployeeRoleModelInt getEmployeeRoleModel() {
+
+		EmployeeRoleModelInt model = (EmployeeRoleModelInt) modelCache.get("employeeRoleModel");
+
+		if (model == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				model = new EmployeeRoleModelHibImpl();
+			}
+		}
+
+		return model;
 	}
 }

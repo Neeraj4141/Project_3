@@ -2,13 +2,15 @@
 <!DOCTYPE hibernate-configuration PUBLIC
 		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
 		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+		
+		<!-- Configuration file  -->
 <hibernate-configuration>
 
 	<session-factory>
 		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
 		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/project_3</property>
 
-	   	<!--<property name="hibernate.connection.url">jdbc:mysql://mysql:3306/project_3</property>! -->
+		<!--<property name="hibernate.connection.url">jdbc:mysql://mysql:3306/project_3</property>! -->
 
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.connection.password">root</property>
@@ -87,9 +89,10 @@
 			resource="in/co/rays/project_3/hbm/InvestorDTO.hbm.xml" />
 		<mapping resource="in/co/rays/project_3/hbm/AuditDTO.hbm.xml" />
 		<mapping resource="in/co/rays/project_3/hbm/HotelDTO.hbm.xml" />
-		
-
-
+		<mapping
+			resource="in/co/rays/project_3/hbm/EmployeeRoleDTO.hbm.xml" />
+		<mapping
+			resource="in/co/rays/project_3/hbm/EmployeeDTO.hbm.xml" />
 
 
 	</session-factory>

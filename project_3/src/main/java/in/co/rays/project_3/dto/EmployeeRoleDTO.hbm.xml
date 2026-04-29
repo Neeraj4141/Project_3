@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 28-Apr-2026, 9:59:11 am by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <subclass name="in.co.rays.project_3.dto.EmployeeRoleDTO" extends="in.co.rays.project_3.dto.BaseDTO" discriminator-value="EmployeeRoleDTO" lazy="false">
+        <property name="roleName" type="java.lang.String">
+            <column name="ROLENAME" />
+        </property>
+    </subclass>
+</hibernate-mapping>
