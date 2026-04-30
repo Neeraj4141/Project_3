@@ -16,6 +16,7 @@ public class EmployeeDTO extends BaseDTO {
 	private String gender;
 	private Date joiningDate;
 
+	// setter getter methods
 	public String getEmployeeName() {
 		return employeeName;
 	}

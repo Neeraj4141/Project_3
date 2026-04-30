@@ -5,7 +5,7 @@
 <%@page import="in.co.rays.project_3.util.DataUtility"%>
 <%@page import="in.co.rays.project_3.util.ServletUtility"%>
 <%@page import="in.co.rays.project_3.controller.ORSView"%>
-<!-- Employee View -->
+
 <!DOCTYPE html>
 <html>
 <head>

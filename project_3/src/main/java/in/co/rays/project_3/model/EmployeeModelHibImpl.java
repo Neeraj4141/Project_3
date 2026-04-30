@@ -21,6 +21,9 @@ import in.co.rays.project_3.util.HibDataSource;
  */
 public class EmployeeModelHibImpl implements EmployeeModelInt {
 
+	/**
+	 *
+	 */
 	@Override
 	public long add(EmployeeDTO dto) throws ApplicationException, DuplicateRecordException {
 

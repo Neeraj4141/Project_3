@@ -22,9 +22,6 @@ public final class ModelFactory {
 
 	}
 
-	/**
-	 * @return
-	 */
 	public static ModelFactory getInstance() {
 		if (mFactory == null) {
 			mFactory = new ModelFactory();

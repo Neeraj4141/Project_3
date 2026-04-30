@@ -11,6 +11,8 @@ public class EmployeeRoleDTO extends BaseDTO {
 	public String getRoleName() {
 		return roleName;
 	}
+	
+	//setter getter method
 
 	public void setRoleName(String roleName) {
 		this.roleName = roleName;

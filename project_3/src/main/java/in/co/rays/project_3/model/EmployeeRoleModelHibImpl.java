@@ -22,6 +22,9 @@ import in.co.rays.project_3.util.HibDataSource;
  */
 public class EmployeeRoleModelHibImpl implements EmployeeRoleModelInt {
 
+	/**
+	 *
+	 */
 	public long add(EmployeeRoleDTO dto) throws ApplicationException, DuplicateRecordException {
 
 		Session session = null;

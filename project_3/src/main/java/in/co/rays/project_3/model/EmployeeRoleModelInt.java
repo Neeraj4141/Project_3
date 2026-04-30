@@ -13,6 +13,12 @@ import in.co.rays.project_3.exception.DuplicateRecordException;
  */
 public interface EmployeeRoleModelInt {
 
+    /**
+     * @param dto
+     * @return
+     * @throws ApplicationException
+     * @throws DuplicateRecordException
+     */
     public long add(EmployeeRoleDTO dto) throws ApplicationException, DuplicateRecordException;
 
     public void delete(EmployeeRoleDTO dto) throws ApplicationException;

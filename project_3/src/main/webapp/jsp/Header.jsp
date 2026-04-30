@@ -207,6 +207,8 @@
 							class="fa fa-sort-amount-down"></i>Subject List
 						</a>
 					</div></li>
+					
+					<!-- UseCases -->
 
 				<%-- <li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
